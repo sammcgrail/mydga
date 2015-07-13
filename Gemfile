@@ -56,4 +56,6 @@ gem 'shoulda-matchers', group: [:development, :test], require: false
 gem 'devise'
 gem 'foundation-rails'
 
+# heroku
+gem 'puma'
 ruby "2.1.5"
