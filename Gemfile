@@ -41,6 +41,10 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'rails_12factor', group: :production
+
+
+
 
 gem 'rspec-rails', group: [:development, :test]
 gem 'capybara', group: [:development, :test]
