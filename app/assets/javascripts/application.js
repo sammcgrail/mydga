@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
+//= require d3
 
 $(function(){ $(document).foundation(); });
