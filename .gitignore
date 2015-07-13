@@ -11,4 +11,8 @@
 /log/*
 !/log/.keep
 /tmp
+/coverage
+.coveralls.yml
 .env
+public/uploads
+capybara-js.png
