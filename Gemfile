@@ -54,6 +54,8 @@ gem 'foundation-rails'
 
 ## end make it so
 
+# badges
+gem 'coveralls', require: false
 
 # d3
 gem "d3-rails"
