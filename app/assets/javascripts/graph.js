@@ -40,7 +40,7 @@ function draw(data) {
 
     bar.append("text")
         .attr("x", function (d) {
-                  return x(d) - 10;
+                  return x(d) - 20;
               })
         .attr("y", barHeight / 2)
         .attr("dy", ".35em")
