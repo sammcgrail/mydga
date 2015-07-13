@@ -57,7 +57,6 @@ gem 'foundation-rails'
 
 # d3
 gem "d3-rails"
-gem 'turbolinks'
 
 # heroku
 gem 'rails_12factor', group: :production
