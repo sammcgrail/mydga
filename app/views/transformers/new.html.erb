@@ -1,27 +1,29 @@
-<h3>Create New Transformer</h3>
+<div class="row">
+  <h3>Create New Transformer</h3>
 
-<%= form_for ([@location,@transformer]) do |f| %>
+  <%= form_for ([@location,@transformer]) do |f| %>
 
- <% if @transformer.errors.any? %>
+   <% if @transformer.errors.any? %>
+      <p>
+        <ul>
+        <% @transformer.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </p>
+    <% end %>
+
     <p>
-      <ul>
-      <% @transformer.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
     </p>
+
+    <p>
+      <%= f.label :kind %>
+      <%= f.text_field :kind %>
+    </p>
+
+    <%= f.submit %>
+
   <% end %>
-
-  <p>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </p>
-
-  <p>
-    <%= f.label :kind %>
-    <%= f.text_field :kind %>
-  </p>
-
-  <%= f.submit %>
-
-<% end %>
+</div>

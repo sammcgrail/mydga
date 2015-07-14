@@ -2,7 +2,6 @@
   <h3>All Transformers</h3>
   <ol>
   <% @transformers.each do |transformer| %>
-
     <li>
       Name: <%= transformer.name %> <br>
       <%= link_to "#{transformer.location.name}", location_path(transformer.location) %>
@@ -12,5 +11,6 @@
   </ol>
   <div class="links">
     <ul><%= link_to "new transformer", root_path %></ul>
+    <ul><%= link_to "back to home", root_path %></ul>
   </div>
 </div>

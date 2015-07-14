@@ -8,7 +8,7 @@ class SamplesController < ApplicationController
   end
 
   def new
-    @transformer = Transofmer.find(params[:location_id])
+    @transformer = Transformer.find(params[:location_id])
     @sample = Sample.new
   end
 

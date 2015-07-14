@@ -1,6 +1,5 @@
 <div class="row">
   <h3>All Locations</h3>
-  <ol>
   <% @locations.each do |location| %>
 
     <li>
@@ -8,9 +7,8 @@
     </li>
   <br>
   <% end %>
-  </ol>
   <div class="links">
     <ul><%= link_to "new location", new_location_path %></ul>
-    <ul><%= link_to "home", root_path %></ul>
+    <ul><%= link_to "back to home", root_path %></ul>
   </div>
 </div>

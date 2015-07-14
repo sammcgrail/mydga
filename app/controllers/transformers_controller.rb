@@ -4,9 +4,9 @@ class TransformersController < ApplicationController
   end
 
   def show
-    @transformer = Transfomer.find(params[:transformer_id])
+    @transformer = Transformer.find(params[:transformer_id])
+    @samples = @transformer.samples.page(params[:page])
   end
-
 
   def new
     @location = Location.find(params[:location_id])

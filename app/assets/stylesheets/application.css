@@ -15,3 +15,7 @@
  *= require foundation_and_overrides
 
  */
+
+body {
+  background-color: lightgrey;
+}
