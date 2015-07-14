@@ -4,14 +4,16 @@ class TransformersController < ApplicationController
   end
 
   def new
+    @location = Location.find(params[:location_id])
     @transformer = Transformer.new
   end
 
   def create
     @transformer = Transformer.new(transformer_params)
+    @transformer.location = Location.find(params[:location_id])
 
     if @transformer.save
-      redirect_to transfomers_path, notice: "Transformer was successfully created."
+      redirect_to transformers_path, notice: "Transformer was successfully created."
     else
       render :new, notice: "Your transformer could not be saved."
     end
@@ -20,7 +22,7 @@ class TransformersController < ApplicationController
   private
 
   def transformer_params
-    params.require(:transformer).permit(:name, :type)
+    params.require(:transformer).permit(:name, :kind)
   end
 
 end

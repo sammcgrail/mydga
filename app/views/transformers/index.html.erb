@@ -5,6 +5,7 @@
 
     <li>
       Name: <%= transformer.name %> <br>
+      <%= link_to "#{transformer.location.name}", location_path(transformer.location) %>
     </li>
   <br>
   <% end %>

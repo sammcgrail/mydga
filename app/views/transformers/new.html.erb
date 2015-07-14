@@ -1,6 +1,6 @@
 <h3>Create New Transformer</h3>
 
-<%= form_for @transformer do |f| %>
+<%= form_for ([@location,@transformer]) do |f| %>
 
  <% if @transformer.errors.any? %>
     <p>
@@ -18,8 +18,8 @@
   </p>
 
   <p>
-    <%= f.label :type %>
-    <%= f.text_field :type %>
+    <%= f.label :kind %>
+    <%= f.text_field :kind %>
   </p>
 
   <%= f.submit %>

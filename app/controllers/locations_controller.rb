@@ -5,6 +5,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    @transformers = @location.transformers
   end
 
   def new

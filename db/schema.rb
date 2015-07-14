@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20150714151953) do
   create_table "transformers", force: :cascade do |t|
     t.integer  "location_id", null: false
     t.string   "name",        null: false
-    t.string   "type"
+    t.string   "kind"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

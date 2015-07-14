@@ -2,13 +2,14 @@ Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
 
-  resources :locations
-
-  resources :transformers do
-    resources :samples
+  resources :locations do
+    resources :transformers, only: [:new, :create]
   end
-  
-  resources :samples
+  resources :transformers do
+    resources :samples, only: [:new, :create]
+  end
+
+  resources :samples, except: [:new, :create]
 
 
   get 'graph/index'
