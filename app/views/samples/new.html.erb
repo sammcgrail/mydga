@@ -1,7 +1,7 @@
 <div class="row">
   <h3>Create New Sample</h3>
 
-  <%= form_for @sample do |f| %>
+  <%= form_for ([@transformer,@sample]) do |f| %>
 
     <% if @sample.errors.any? %>
       <p>

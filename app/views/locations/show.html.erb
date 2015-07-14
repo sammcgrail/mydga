@@ -7,7 +7,7 @@
 
 <ul>
   <% @transformers.each do |transformer| %>
-    <li>Transformer name: <%= link_to "#{transformer.name}", root_path %></li>
+    <li>Transformer name: <%= link_to "#{transformer.name}", transformer_path(transformer) %></li>
   <% end %>
 </ul>
 

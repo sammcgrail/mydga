@@ -5,6 +5,8 @@ class TransformersController < ApplicationController
 
   def show
     @transformer = Transformer.find(params[:id])
+    @samples = @transformer.samples
+    @id = params[:id]
   end
 
   def new
@@ -17,7 +19,7 @@ class TransformersController < ApplicationController
     @transformer.location = Location.find(params[:location_id])
 
     if @transformer.save
-      redirect_to transformers_path, notice: "Transformer was successfully created."
+      redirect_to location_path(params[:location_id]), notice: "Transformer was successfully created."
     else
       render :new, notice: "Your transformer could not be saved."
     end

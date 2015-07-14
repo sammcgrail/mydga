@@ -5,11 +5,11 @@ Rails.application.routes.draw do
   resources :locations do
     resources :transformers, only: [:new, :create, :show]
   end
-  resources :transformers, except: [:new, :create] do
-    resources :samples
+  resources :transformers do
+    resources :samples, only: [:new, :create, :show]
   end
 
-  resources :samples, only: [:index]
+  resources :samples, except: [:new, :create]
 
 
   get 'graph/index'

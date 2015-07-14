@@ -1,11 +1,18 @@
 
 <h3>Transformer show page for Transformer id: <%= @transformer.id %></h3>
+  <ul>
+    <li><strong>Name:</strong> <%= @transformer.name %></li>
+  </ul>
 
-<ul>
-  <li><strong>Name:</strong> <%= @transformer.name %></li>
-</ul>
+  <ul>
+    <% @samples.each do |sample| %>
+      <li>Sample name: <%= link_to "#{sample.date}", sample_path(sample) %></li>
+    <% end %>
+  </ul>
 
 <div class="links">
+  <ul><%= link_to "add sample", new_transformer_sample_path(@id) %></ul>
+
   <ul><%= link_to "back to all transformers", transformers_path %></ul>
   <ul><%= link_to "back to home", root_path %></ul>
 </div>
