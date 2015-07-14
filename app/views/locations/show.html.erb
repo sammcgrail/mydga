@@ -1,0 +1,11 @@
+
+<h3>Location show page for Location id: <%= @location.id %></h3>
+
+<ul>
+  <li><strong>Name:</strong> <%= @location.name %></li>
+</ul>
+
+<div class="links">
+  <ul><%= link_to "new location", new_location_path %></ul>
+  <ul><%= link_to "all locations", locations_path %></ul>
+</div>

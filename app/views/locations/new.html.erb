@@ -1,0 +1,22 @@
+<h3>Create New Location</h3>
+
+<%= form_for @location do |f| %>
+
+ <% if @location.errors.any? %>
+    <p>
+      <ul>
+      <% @location.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </p>
+  <% end %>
+
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

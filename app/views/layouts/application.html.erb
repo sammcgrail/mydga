@@ -12,10 +12,16 @@
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">Mydga</a></h1>
+
       </li>
     </ul>
 
     <section class="top-bar-section">
+      <ul><%= link_to "transformers", transformers_path %></ul>
+      <ul><%= link_to "locations", locations_path %></ul>
+      <ul><%= link_to "samples", samples_path %></ul>
+      <ul><%= link_to "new transformer", new_transformer_path %></ul>
+      <ul><%= link_to "new location", new_location_path %></ul>
       <ul class="right">
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>

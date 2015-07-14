@@ -2,6 +2,15 @@ Rails.application.routes.draw do
   root 'homes#index'
   devise_for :users
 
+  resources :locations
+
+  resources :transformers do
+    resources :samples
+  end
+  
+  resources :samples
+
+
   get 'graph/index'
   get 'graph/data', :defaults => { :format => 'json' }
 

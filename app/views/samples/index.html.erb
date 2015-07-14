@@ -1,0 +1,16 @@
+<h3>All Samples</h3>
+
+<ol>
+<% @samples.each do |car| %>
+  <li>
+    <ul>
+      <li>Manufacturer: <%= car.manufacturer.name %></li>
+      <li>Color: <%= car.color %></li>
+      <li>Year: <%= car.year %></li>
+      <li>Mileage: <%= car.mileage %></li>
+      <%= link_to "Car Details", car_path(car) %>
+    </ul>
+  </li>
+  <br>
+<% end %>
+</ol>

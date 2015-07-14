@@ -1,0 +1,11 @@
+
+<h3>Transformer show page for Transformer id: <%= @transformer.id %></h3>
+
+<ul>
+  <li><strong>Name:</strong> <%= @transformer.name %></li>
+</ul>
+
+<div class="links">
+  <ul><%= link_to "new transformer", new_transfomer_path %></ul>
+  <ul><%= link_to "all transformers", transformers_path %></ul>
+</div>

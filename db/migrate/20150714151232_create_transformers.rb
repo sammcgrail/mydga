@@ -4,7 +4,7 @@ class CreateTransformers < ActiveRecord::Migration
       t.integer :location_id, null: false
 
       t.string :name, null: false
-      t.string :type, null: false
+      t.string :type
 
       t.timestamps null: false
     end
