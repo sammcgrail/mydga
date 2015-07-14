@@ -5,9 +5,11 @@
   <li><strong>Name:</strong> <%= @location.name %></li>
 </ul>
 
-<% @transformers.each do |transformer| %>
-<%= transformer.name %>
-<% end %>
+<ul>
+  <% @transformers.each do |transformer| %>
+    <li>Transformer name: <%= link_to "#{transformer.name}", root_path %></li>
+  <% end %>
+</ul>
 
 <div class="links">
   <ul><%= link_to "all locations", locations_path %></ul>

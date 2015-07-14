@@ -3,6 +3,11 @@ class TransformersController < ApplicationController
     @transformers = Transformer.all
   end
 
+  def show
+    @transformer = Transfomer.find(params[:transformer_id])
+  end
+
+
   def new
     @location = Location.find(params[:location_id])
     @transformer = Transformer.new

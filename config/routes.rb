@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :locations do
     resources :transformers, only: [:new, :create]
   end
-  resources :transformers do
+  resources :transformers, except: [:new, :create] do
     resources :samples, only: [:new, :create]
   end
 
