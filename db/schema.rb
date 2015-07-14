@@ -11,10 +11,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713164531) do
+ActiveRecord::Schema.define(version: 20150714151953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.string   "latitude"
+    t.string   "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "samples", force: :cascade do |t|
+    t.integer  "user_id",         null: false
+    t.integer  "transformer_id",  null: false
+    t.string   "date",            null: false
+    t.decimal  "hydrogen"
+    t.decimal  "oxygen"
+    t.decimal  "nitrogen"
+    t.decimal  "methane"
+    t.decimal  "carbon_monoxide"
+    t.decimal  "ethane"
+    t.decimal  "carbon_dioxide"
+    t.decimal  "ethylene"
+    t.decimal  "acetylene"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
+
+  create_table "transformers", force: :cascade do |t|
+    t.integer  "location_id", null: false
+    t.string   "name",        null: false
+    t.string   "type",        null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
