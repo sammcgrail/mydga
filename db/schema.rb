@@ -17,8 +17,20 @@ ActiveRecord::Schema.define(version: 20150713225047) do
   enable_extension "plpgsql"
 
   create_table "samples", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id",         null: false
+    t.integer  "transformer_id",  null: false
+    t.string   "date",            null: false
+    t.decimal  "hydrogen"
+    t.decimal  "oxygen"
+    t.decimal  "nitrogen"
+    t.decimal  "methane"
+    t.decimal  "carbon_monoxide"
+    t.decimal  "ethane"
+    t.decimal  "carbon_dioxide"
+    t.decimal  "ethylene"
+    t.decimal  "acetylene"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|
