@@ -3,14 +3,13 @@
   <ol>
   <% @transformers.each do |transformer| %>
     <li>
-      Name: <%= transformer.name %> <br>
-      <%= link_to "#{transformer.location.name}", location_path(transformer.location) %>
+      Name: <%= link_to "#{transformer.name}", transformer_path(transformer.location) %> <br>
+      Location: <%= link_to "#{transformer.location.name}", location_path(transformer.location) %>
     </li>
   <br>
   <% end %>
   </ol>
   <div class="links">
-    <ul><%= link_to "new transformer", root_path %></ul>
     <ul><%= link_to "back to home", root_path %></ul>
   </div>
 </div>

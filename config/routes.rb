@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :locations do
-    resources :transformers, only: [:new, :create, :index, :show]
+    resources :transformers, only: [:new, :create, :show]
   end
   resources :transformers, except: [:new, :create] do
     resources :samples

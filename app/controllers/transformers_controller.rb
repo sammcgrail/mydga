@@ -4,8 +4,7 @@ class TransformersController < ApplicationController
   end
 
   def show
-    @transformer = Transformer.find(params[:transformer_id])
-    @samples = @transformer.samples.page(params[:page])
+    @transformer = Transformer.find(params[:id])
   end
 
   def new
