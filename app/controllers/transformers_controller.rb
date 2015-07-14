@@ -29,5 +29,4 @@ class TransformersController < ApplicationController
   def transformer_params
     params.require(:transformer).permit(:name, :kind)
   end
-
 end

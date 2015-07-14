@@ -29,5 +29,4 @@ class SamplesController < ApplicationController
       :date, :hydrogen, :oxygen, :nitrogen, :methane, :carbon_monoxide, :ethane, :carbon_dioxide, :ethylene, :acetylene
     )
   end
-
 end
