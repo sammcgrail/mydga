@@ -1,5 +1,25 @@
-<h3>Sample <%= @sample.id %></h3>
+<div class="row">
 
-<ul>
-  <li><strong>Date:</strong> <%= @sample.date %></li>
-</ul>
+  <h3>Sample <%= @sample.id %></h3>
+
+  <ul>
+    <li>Date: <%= @sample.date %></li>
+
+    <li>Hydrogen: <%= @sample.hydrogen %></li>
+    <li>Oxygen: <%= @sample.oxygen %></li>
+    <li>Nitrogen: <%= @sample.nitrogen %></li>
+    <li>Methane: <%= @sample.methane %></li>
+    <li>Carbon Monoxide: <%= @sample.carbon_monoxide %></li>
+    <li>Ethane: <%= @sample.ethane %></li>
+    <li>Carbon Dioxide: <%= @sample.carbon_dioxide %></li>
+    <li>Ethylene: <%= @sample.ethylene %></li>
+    <li>Acetlyene: <%= @sample.acetylene %></li>
+  </ul>
+
+  <div class="links">
+    <ul><%= link_to "back to transformers", transformers_path %></ul>
+
+    <ul><%= link_to "back to all samples", samples_path %></ul>
+    <ul><%= link_to "back to home", root_path %></ul>
+  </div>
+</div>

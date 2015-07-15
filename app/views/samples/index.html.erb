@@ -2,7 +2,7 @@
   <h3>All Samples</h3>
   <% @samples.each do |sample| %>
     <li>
-        Date: <%= link_to "#{sample.date}", samples_path %>
+        Date: <%= link_to "#{sample.date}", sample_path(sample) %>
     </li>
     <br>
   <% end %>

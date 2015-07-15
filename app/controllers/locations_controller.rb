@@ -17,7 +17,7 @@ class LocationsController < ApplicationController
     @location = Location.new(location_params)
 
     if @location.save
-      redirect_to transformer_path(params[:transformer_id]), notice: "Location was successfully created."
+      redirect_to locations_path, notice: "Location was successfully created."
     else
       render :new, notice: "Your location could not be saved."
     end

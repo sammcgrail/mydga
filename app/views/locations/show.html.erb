@@ -1,18 +1,20 @@
-
+<div class="row">
 <h3>Location show page for Location id: <%= @location.id %> Location name: <%= @location.name %> </h3>
 
-<ul>
-  <li><strong>Name:</strong> <%= @location.name %></li>
-</ul>
+  <ul>
+    <li><strong>Name:</strong> <%= @location.name %></li>
+  </ul>
 
-<ul>
-  <% @transformers.each do |transformer| %>
-    <li>Transformer name: <%= link_to "#{transformer.name}", transformer_path(transformer) %></li>
-  <% end %>
-</ul>
+  <h4>Transformers: </h4>
 
-<div class="links">
+  <ul>
+    <% @transformers.each do |transformer| %>
+      <li>Transformer name: <%= link_to "#{transformer.name}", transformer_path(transformer) %></li>
+    <% end %>
+  </ul>
+
+  <div class="links">
   <ul><%= link_to "all locations", locations_path %></ul>
   <ul><%= link_to "add transformer to location", new_location_transformer_path(@id) %></ul>
-
+  </div>
 </div>

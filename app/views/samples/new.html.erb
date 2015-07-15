@@ -14,11 +14,6 @@
     <% end %>
 
     <p>
-      <%= f.label :user %>
-      <%= f.collection_select(:user_id, User.all, :id, :email)%>
-    </p>
-
-    <p>
       <%= f.label :date %>
       <%= f.text_field :date %>
     </p>

@@ -6,6 +6,7 @@ class SamplesController < ApplicationController
   def show
     @sample = Sample.find(params[:id])
     @id = params[:id]
+    @transformer_id = @sample.transformer_id
   end
 
   def new
@@ -23,6 +24,17 @@ class SamplesController < ApplicationController
     else
       render :new, notice: "Your sample could not be saved."
     end
+  end
+
+  def update
+    @sample = Sample.find(params[:id])
+  end
+
+  def destroy
+    @rubygem = Transformer.find(params[:transformer_id])
+    @sample = Sample.find(params[:id])
+    @sample.destroy
+    redirect_to transformer_path(@transformer)
   end
 
   private
