@@ -1,11 +1,11 @@
 <div class="row">
   <h3>All Locations</h3>
   <% @locations.each do |location| %>
-
-    <li>
-      Name: <%= link_to "#{location.name}", location_path(location) %> <br>
-    </li>
-  <br>
+    <div class="location">
+      <li>
+        Name: <%= link_to "#{location.name}", location_path(location) %> <br>
+      </li>
+    </div>
   <% end %>
   <div class="links">
     <ul><%= link_to "new location", new_location_path %></ul>

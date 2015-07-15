@@ -9,9 +9,11 @@
 <h4>Samples: </h4>
   <ul>
     <% @samples.each do |sample| %>
-      <li>Sample name: <%= link_to "#{sample.date}", sample_path(sample) %></li>
+      <li>Sample name: <%= link_to "#{sample.date}", root_path %></li>
     <% end %>
   </ul>
+
+<ul><%= link_to "See Parent Location", location_path(@transformer.location) %></ul>
 
 <div class="links">
   <ul><%= link_to "add sample", new_transformer_sample_path(@id) %></ul>

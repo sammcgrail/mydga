@@ -3,13 +3,14 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :locations do
-    resources :transformers, only: [:new, :create, :show]
-  end
-  resources :transformers do
-    resources :samples, only: [:new, :create, :show, :index]
+    resources :transformers
   end
 
-  resources :samples, except: [:new, :create]
+  resources :transformers do
+    resources :samples
+  end
+
+  resources :samples, only: [:index]
 
 
   get 'graph/index'

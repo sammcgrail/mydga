@@ -27,11 +27,12 @@ class SamplesController < ApplicationController
   end
 
   def update
+    @transformer = Transformer.find(params[:transformer_id])
     @sample = Sample.find(params[:id])
   end
 
   def destroy
-    @rubygem = Transformer.find(params[:transformer_id])
+    @transformer = Transformer.find(params[:transformer_id])
     @sample = Sample.find(params[:id])
     @sample.destroy
     redirect_to transformer_path(@transformer)
