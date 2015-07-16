@@ -4,6 +4,7 @@
   <title>MyDGA</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,7 +21,7 @@
       <ul class="right">
         <li><%= link_to "Locations", locations_path %></li>
         <li><%= link_to "Transformers", transformers_path %></li>
-        <li><%= link_to "Samples", root_path %></li>
+        <li><%= link_to "Samples", samples_path %></li>
         <%- if current_user -%>
           <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
         <%- else -%>

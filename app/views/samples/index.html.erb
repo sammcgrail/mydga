@@ -1,10 +1,9 @@
 <div class="row">
   <h3>All Samples</h3>
   <% @samples.each do |sample| %>
-    <li>
-        Date: <%= link_to "#{sample.date}", sample_path(sample) %>
-    </li>
-    <br>
+    <div class="sample">
+      <li>Date: <%= link_to "#{sample.date}", samples_path %></li>
+    </div>
   <% end %>
   <div class="links">
     <ul><%= link_to "back to home", root_path %></ul>

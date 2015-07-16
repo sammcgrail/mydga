@@ -43,7 +43,7 @@ function draw(data) {
                   return x(d) - 20;
               })
         .attr("y", barHeight / 2)
-        .attr("dy", ".35em")
+        .attr("dy", ".5em")
         .style("fill", "white")
         .text(function (d) {
                   return d;
