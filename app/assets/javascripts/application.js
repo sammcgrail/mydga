@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require foundation
-//= require_tree .
 //= require d3
 //= require c3
+//= require_tree .
 
 $(function(){ $(document).foundation(); });
