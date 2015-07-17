@@ -1,5 +1,6 @@
 <div class="row">
   <h2>Sample <%= @sample.id %></h2>
+
   <div class="sample-show">
       <li><strong>Transformer name: <%= @sample.transformer.name %></strong></li>
       <li><strong>Sample location: <%= @sample.transformer.location.name %></strong></li>
@@ -22,4 +23,51 @@
         data: { confirm: 'Are you sure?' } %></div>
     <% end %>
   </div>
+
+  <table id="table_id" class="display">
+      <thead>
+          <tr>
+              <th>Compound</th>
+              <th>PPM</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Hydrogen</td>
+              <td><%= @sample.hydrogen %></td>
+          </tr>
+          <tr>
+              <td>Oxygen</td>
+              <td><%= @sample.oxygen %></td>
+          </tr>
+          <tr>
+              <td>Nitrogen</td>
+              <td><%= @sample.nitrogen %></td>
+          </tr>
+          <tr>
+              <td>Methane</td>
+              <td><%= @sample.methane %></td>
+          </tr>
+          <tr>
+              <td>Carbon Monoxide</td>
+              <td><%= @sample.carbon_monoxide %></td>
+          </tr>
+          <tr>
+              <td>Ethane</td>
+              <td><%= @sample.ethane %></td>
+          </tr>
+          <tr>
+              <td>Carbon Dioxide</td>
+              <td><%= @sample.carbon_dioxide %></td>
+          </tr>
+          <tr>
+              <td>Ethylene</td>
+              <td><%= @sample.ethylene %></td>
+          </tr>
+          <tr>
+              <td>Acetylene</td>
+              <td><%= @sample.acetylene %></td>
+          </tr>
+      </tbody>
+  </table>
 </div>

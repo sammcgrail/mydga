@@ -53,7 +53,7 @@ gem 'devise'
 gem 'foundation-rails'
 
 ## end make it so
-
+gem 'jquery-datatables-rails', '~> 3.3.0'
 # badges
 gem 'coveralls', require: false
 

@@ -5,7 +5,7 @@ class SamplesController < ApplicationController
 
   def show
     @sample = Sample.find(params[:id])
-    @id = params[:id]
+    # @id = params[:id]
     @transformer_id = @sample.transformer_id
     @transformer = @sample.transformer
   end

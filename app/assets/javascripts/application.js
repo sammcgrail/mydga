@@ -12,9 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require dataTables/jquery.dataTables
 //= require foundation
 //= require_tree .
 //= require d3
 //= require c3
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready( function () {
+   $('#table_id').DataTable();
+} );
