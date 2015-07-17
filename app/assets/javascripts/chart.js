@@ -12,7 +12,15 @@ var chart = c3.generate({
         ['Acetylene', 0, 0, 0, 0, .8, 1.2]
       ],
       type: 'line'
+    },
+    grid: {
+    x: {
+        show: true
+    },
+    y: {
+        show: true
     }
+}
 
 
 
