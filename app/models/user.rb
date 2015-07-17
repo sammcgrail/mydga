@@ -5,4 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :samples
+  has_many :transformers
+  has_many :locations
 end

@@ -1,11 +1,13 @@
 <div class="row">
+  <h2>Mini Dissolved Gas Analysis</h2>
   <p>
-    Mini Dissolved Gas Analysis for transformer substation engineers
-<li>Visualize DGA sample data in a meaningful manner</li>
-<li>Add new samples while in the field to check if values are within safety limits</li>
-<li>Get alerts when samples outside of IEEE interpretation levels or personal user set limits are added</li>
+    <li>Designed for transformer substation engineers</li>
+    <li>Visualize DGA sample data in a meaningful manner</li>
+    <li>Add new samples while in the field to quickly check if values are within safety limits</li>
+    <li>Get alerts when other users add samples outside of IEEE interpretation levels or custom limits</li>
   </p>
-
-  <div><%=link_to "Graphs", graph_index_path %></div>
-  <div><%=link_to "Data", graph_data_path %></div>
+  <div class="link">
+    <div><%=link_to "Graphs", graph_index_path, class: 'button'  %></div>
+    <div><%=link_to "Data", graph_data_path, class: 'button'  %></div>
+  </div>
 </div>

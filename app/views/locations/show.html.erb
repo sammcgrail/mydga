@@ -1,20 +1,22 @@
 <div class="row">
-<h3>Location show page for Location id: <%= @location.id %> Location name: <%= @location.name %> </h3>
-
-  <ul>
-    <li><strong>Name:</strong> <%= @location.name %></li>
-  </ul>
-
+  <h2>Location name: <%= @location.name %> </h2>
+  <h3>Latitude: lorem Longitude: lorem</h3>
   <h4>Transformers: </h4>
 
-  <ul>
+  <div class="transformer">
     <% @transformers.each do |transformer| %>
-      <li>Transformer name: <%= link_to "#{transformer.name}", transformer_path(transformer) %></li>
+      <div>Transformer name: <%= link_to "#{transformer.name}", transformer_path(transformer) %></div>
+      <div># of Samples: <%= transformer.samples.count %></div>
     <% end %>
-  </ul>
+  </div>
 
   <div class="links">
-  <ul><%= link_to "all locations", locations_path %></ul>
-  <ul><%= link_to "add transformer to location", new_location_transformer_path(@id) %></ul>
+    <div><%= link_to "Add transformer to #{@location.name}", new_location_transformer_path(@id), class: 'button' %></div>
+    <% if current_user == @location.user %>
+      <div><%= link_to 'Edit this location', edit_location_path(@location), class: 'button' %></div>
+      <div><%= link_to 'Delete location', location_path(@location), class: 'button',
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></div>
+    <% end %>
   </div>
 </div>

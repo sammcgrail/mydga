@@ -1,0 +1,30 @@
+<% if current_user == @location.user %>
+<div class="row">
+  <h3>Edit Location</h3>
+
+  <%= form_for @location do |f| %>
+
+   <% if @location.errors.any? %>
+      <p>
+        <ul>
+        <% @location.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </p>
+    <% end %>
+
+    <p>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </p>
+
+    <%= f.submit %>
+
+  <% end %>
+</div>
+<% elsif user_signed_in? %>
+  <h3 class='not_logged_in'>You must be the author to edit!</h3>
+<% else %>
+  <h3 class='not_logged_in'>You must be logged in to edit!</h3>
+<% end %>

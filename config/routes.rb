@@ -10,8 +10,7 @@ Rails.application.routes.draw do
     resources :samples
   end
 
-  resources :samples, only: [:index]
-
+  resources :samples
 
   get 'graph/index'
   get 'graph/data', :defaults => { :format => 'json' }

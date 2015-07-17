@@ -13,9 +13,10 @@
  *= require_tree .
  *= require_self
  *= require foundation_and_overrides
+ *= require c3
 
  */
 
 body {
-  background-color: lightgrey;
+  background-color: #e9e9e9;
 }

@@ -1,3 +1,4 @@
+<% if current_user == @sample.user %>
   <div class="row">
     <h3>Edit Sample</h3>
 
@@ -59,3 +60,8 @@
 
     <% end %>
   </div>
+<% elsif user_signed_in? %>
+  <h3 class='not_logged_in'>You must be the author to edit!</h3>
+<% else %>
+  <h3 class='not_logged_in'>You must be logged in to edit!</h3>
+<% end %>
