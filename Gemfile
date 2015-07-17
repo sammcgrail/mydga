@@ -57,6 +57,10 @@ gem 'foundation-rails'
 # badges
 gem 'coveralls', require: false
 
+# s3
+gem 'fog'
+gem 'carrierwave'
+
 # d3
 gem "d3-rails"
 
