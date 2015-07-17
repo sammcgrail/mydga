@@ -3,11 +3,14 @@
 <head>
   <title>MyDGA</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
   <%= favicon_link_tag 'favicon.ico' %>
   <%= csrf_meta_tags %>
+  <%= javascript_include_tag 'application' %>
+
 </head>
 <body>
+
+
 
   <nav class="top-bar">
     <ul class="title-area">
@@ -39,7 +42,7 @@
   <%- end -%>
 
   <%= yield %>
-
+  <%= javascript_include_tag 'application' %>
   <%= yield :extra_footer %>
 </body>
 </html>

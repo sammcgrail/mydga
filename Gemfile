@@ -68,6 +68,6 @@ gem "d3-rails"
 gem 'c3-rails'
 
 # heroku
-gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: [:production, :staging]
 gem 'puma'
 ruby "2.1.5"
