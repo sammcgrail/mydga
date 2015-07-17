@@ -1,0 +1,35 @@
+<% if current_user == @transformer.user %>
+  <div class="row">
+    <h3>Edit Transformer</h3>
+
+    <%= form_for ([@location,@transformer]) do |f| %>
+
+     <% if @transformer.errors.any? %>
+        <p>
+          <ul>
+          <% @transformer.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </p>
+      <% end %>
+
+      <p>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </p>
+
+      <p>
+        <%= f.label :kind %>
+        <%= f.text_field :kind %>
+      </p>
+
+      <%= f.submit %>
+
+    <% end %>
+  </div>
+<% elsif user_signed_in? %>
+  <h3 class='not_logged_in'>You must be the author to edit!</h3>
+<% else %>
+  <h3 class='not_logged_in'>You must be logged in to edit!</h3>
+<% end %>

@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20150714151953) do
   enable_extension "plpgsql"
 
   create_table "locations", force: :cascade do |t|
+    t.string   "user_id",    null: false
     t.string   "name",       null: false
     t.string   "latitude"
     t.string   "longitude"
@@ -42,9 +43,10 @@ ActiveRecord::Schema.define(version: 20150714151953) do
   end
 
   create_table "transformers", force: :cascade do |t|
+    t.integer  "user_id",     null: false
     t.integer  "location_id", null: false
     t.string   "name",        null: false
-    t.string   "type",        null: false
+    t.string   "kind"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

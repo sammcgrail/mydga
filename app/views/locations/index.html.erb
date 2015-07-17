@@ -1,0 +1,11 @@
+<div class="row">
+  <h3>All Locations</h3>
+  <% @locations.each do |location| %>
+    <div class="location">
+      <li>Name: <%= link_to "#{location.name}", location_path(location) %></li>
+    </div>
+  <% end %>
+  <div class="links">
+    <div><%= link_to "Add new location", new_location_path, class: 'button' %></div>
+  </div>
+</div>

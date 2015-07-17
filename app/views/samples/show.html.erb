@@ -1,0 +1,25 @@
+<div class="row">
+  <h2>Sample <%= @sample.id %></h2>
+  <div class="sample-show">
+      <li><strong>Transformer name: <%= @sample.transformer.name %></strong></li>
+      <li><strong>Sample location: <%= @sample.transformer.location.name %></strong></li>
+      <li><strong>Date: <%= @sample.date %></strong></li>
+      <li>Hydrogen: <%= @sample.hydrogen %></li>
+      <li>Oxygen: <%= @sample.oxygen %></li>
+      <li>Nitrogen: <%= @sample.nitrogen %></li>
+      <li>Methane: <%= @sample.methane %></li>
+      <li>Carbon Monoxide: <%= @sample.carbon_monoxide %></li>
+      <li>Ethane: <%= @sample.ethane %></li>
+      <li>Carbon Dioxide: <%= @sample.carbon_dioxide %></li>
+      <li>Ethylene: <%= @sample.ethylene %></li>
+      <li>Acetlyene: <%= @sample.acetylene %></li>
+  </div>
+  <div class="links">
+    <% if current_user == @sample.user %>
+      <div><%= link_to 'Edit this sample', edit_sample_path(@sample), class: 'button' %></div>
+      <div><%= link_to 'Delete sample', sample_path(@sample), class: 'button',
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></div>
+    <% end %>
+  </div>
+</div>
