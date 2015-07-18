@@ -1,5 +1,6 @@
 <% if current_user == @transformer.user %>
   <div class="row">
+  <div class="small-12 large-8 columns">
     <h3>Edit Transformer</h3>
 
     <%= form_for ([@location,@transformer]) do |f| %>
@@ -27,9 +28,10 @@
       <%= f.submit %>
 
     <% end %>
-  </div>
 <% elsif user_signed_in? %>
   <h3 class='not_logged_in'>You must be the author to edit!</h3>
 <% else %>
   <h3 class='not_logged_in'>You must be logged in to edit!</h3>
 <% end %>
+</div>
+</div>

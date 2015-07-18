@@ -1,14 +1,36 @@
 <div class="row">
+  <div class="small-12 large-8 columns">
   <h2>Location name: <%= @location.name %> </h2>
-  <h3>Latitude: lorem Longitude: lorem</h3>
+  <h3>Latitude: <%= @location.latitude %> Longitude: <%= @location.longitude  %>  put map here? </h3>
   <h4>Transformers: </h4>
 
-  <div class="transformer">
-    <% @transformers.each do |transformer| %>
-      <div>Transformer name: <%= link_to "#{transformer.name}", transformer_path(transformer) %></div>
-      <div># of Samples: <%= transformer.samples.count %></div>
+
+  <div class="datatable">
+    <table id="location-transformer-list" class="display">
+        <thead>
+            <tr>
+                <th>Transformer Name</th>
+                <th>Lat/Long [if supplied]</th>
+                <th>Number of samples</th>
+            </tr>
+        </thead>
+        <tbody>
+  <% @transformers.each do |transformer| %>
+    <tr>
+        <td><%= link_to "#{transformer.name}", transformer_path(transformer) %></td>
+        <td><%= transformer.kind %></td>
+        <td><%= transformer.samples.count %></td>
+    </tr>
     <% end %>
+        </tbody>
+    </table>
+    <br>
   </div>
+
+
+
+
+
 
   <div class="links">
     <div><%= link_to "Add transformer to #{@location.name}", new_location_transformer_path(@id), class: 'button' %></div>
@@ -19,4 +41,5 @@
         data: { confirm: 'Are you sure?' } %></div>
     <% end %>
   </div>
+</div>
 </div>

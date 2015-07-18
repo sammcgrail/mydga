@@ -15,11 +15,34 @@
 //= require dataTables/jquery.dataTables
 //= require foundation
 //= require d3
-//= require c3
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
 
 $(document).ready( function () {
-   $('#table_id').DataTable();
+   $('#locations').DataTable({
+     "paging":   false,
+     "info":     false
+   } );
+
+   $('#location-transformer-list').DataTable({
+     "paging":   false,
+     "info":     false
+   } );
+
+   $('#transformers').DataTable({
+     "paging":   false,
+     "info":     false
+   } );
+
+   $('#transformer-sample-list').DataTable({
+     "paging":   false,
+     "info":     false
+   } );
+
+   $('#samples').DataTable({
+     "paging":   false,
+     "info":     false
+   } );
+
 } );

@@ -1,61 +1,63 @@
 <div class="row">
-  <h3>Create New Sample</h3>
+  <div class="small-12 large-8 columns">
+    <h3>Create New Sample</h3>
 
-  <%= form_for ([@transformer,@sample]) do |f| %>
+    <%= form_for ([@transformer,@sample]) do |f| %>
 
-    <% if @sample.errors.any? %>
+      <% if @sample.errors.any? %>
+        <p>
+          <ul>
+          <% @sample.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </p>
+      <% end %>
+
       <p>
-        <ul>
-        <% @sample.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
+        <%= f.label :date %>
+        <%= f.text_field :date %>
       </p>
+
+      <p>
+        <%= f.label :hydrogen %>
+        <%= f.text_field :hydrogen %>
+      </p>
+      <p>
+        <%= f.label :oxygen %>
+        <%= f.text_field :oxygen %>
+      </p>
+      <p>
+        <%= f.label :nitrogen %>
+        <%= f.text_field :nitrogen %>
+      </p>
+      <p>
+        <%= f.label :methane %>
+        <%= f.text_field :methane %>
+      </p>
+      <p>
+        <%= f.label :carbon_monoxide %>
+        <%= f.text_field :carbon_monoxide %>
+      </p>
+      <p>
+        <%= f.label :ethane %>
+        <%= f.text_field :ethane %>
+      </p>
+      <p>
+        <%= f.label :carbon_dioxide %>
+        <%= f.text_field :carbon_dioxide %>
+      </p>
+      <p>
+        <%= f.label :ethylene %>
+        <%= f.text_field :ethylene %>
+      </p>
+      <p>
+        <%= f.label :acetylene %>
+        <%= f.text_field :acetylene %>
+      </p>
+
+      <%= f.submit %>
+
     <% end %>
-
-    <p>
-      <%= f.label :date %>
-      <%= f.text_field :date %>
-    </p>
-
-    <p>
-      <%= f.label :hydrogen %>
-      <%= f.text_field :hydrogen %>
-    </p>
-    <p>
-      <%= f.label :oxygen %>
-      <%= f.text_field :oxygen %>
-    </p>
-    <p>
-      <%= f.label :nitrogen %>
-      <%= f.text_field :nitrogen %>
-    </p>
-    <p>
-      <%= f.label :methane %>
-      <%= f.text_field :methane %>
-    </p>
-    <p>
-      <%= f.label :carbon_monoxide %>
-      <%= f.text_field :carbon_monoxide %>
-    </p>
-    <p>
-      <%= f.label :ethane %>
-      <%= f.text_field :ethane %>
-    </p>
-    <p>
-      <%= f.label :carbon_dioxide %>
-      <%= f.text_field :carbon_dioxide %>
-    </p>
-    <p>
-      <%= f.label :ethylene %>
-      <%= f.text_field :ethylene %>
-    </p>
-    <p>
-      <%= f.label :acetylene %>
-      <%= f.text_field :acetylene %>
-    </p>
-
-    <%= f.submit %>
-
-  <% end %>
+  </div>
 </div>

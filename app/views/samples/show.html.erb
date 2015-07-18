@@ -1,76 +1,64 @@
 <div class="row">
-  <h2>Sample <%= @sample.id %></h2>
-
-  <div id="chart"></div>
-
-  <div class="sample-show" class="small-3 columns">
-      <li><strong>Transformer name: <%= @sample.transformer.name %></strong></li>
-      <li><strong>Sample location: <%= @sample.transformer.location.name %></strong></li>
-      <li><strong>Date: <%= @sample.date %></strong></li>
-      <li>Hydrogen: <%= @sample.hydrogen %></li>
-      <li>Oxygen: <%= @sample.oxygen %></li>
-      <li>Nitrogen: <%= @sample.nitrogen %></li>
-      <li>Methane: <%= @sample.methane %></li>
-      <li>Carbon Monoxide: <%= @sample.carbon_monoxide %></li>
-      <li>Ethane: <%= @sample.ethane %></li>
-      <li>Carbon Dioxide: <%= @sample.carbon_dioxide %></li>
-      <li>Ethylene: <%= @sample.ethylene %></li>
-      <li>Acetlyene: <%= @sample.acetylene %></li>
+  <div class="large-12 small-12 columns">
+    <h2>Sample <%= @sample.id %></h2>
+    <div id="chart"></div>
+    <div class="datatable">
+      <table id="samples" class="display">
+          <thead>
+              <tr>
+                  <th>Compound</th>
+                  <th>PPM</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Hydrogen</td>
+                  <td><%= @sample.hydrogen %></td>
+              </tr>
+              <tr>
+                  <td>Oxygen</td>
+                  <td><%= @sample.oxygen %></td>
+              </tr>
+              <tr>
+                  <td>Nitrogen</td>
+                  <td><%= @sample.nitrogen %></td>
+              </tr>
+              <tr>
+                  <td>Methane</td>
+                  <td><%= @sample.methane %></td>
+              </tr>
+              <tr>
+                  <td>Carbon Monoxide</td>
+                  <td><%= @sample.carbon_monoxide %></td>
+              </tr>
+              <tr>
+                  <td>Ethane</td>
+                  <td><%= @sample.ethane %></td>
+              </tr>
+              <tr>
+                  <td>Carbon Dioxide</td>
+                  <td><%= @sample.carbon_dioxide %></td>
+              </tr>
+              <tr>
+                  <td>Ethylene</td>
+                  <td><%= @sample.ethylene %></td>
+              </tr>
+              <tr>
+                  <td>Acetylene</td>
+                  <td><%= @sample.acetylene %></td>
+              </tr>
+          </tbody>
+      </table>
+      <br>
+    </div>
+    <div class="links">
+      <% if current_user == @sample.user %>
+        <div><%= link_to 'Edit this sample', edit_sample_path(@sample), class: 'button' %></div>
+        <div><%= link_to 'Delete sample', sample_path(@sample), class: 'button',
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></div>
+      <% end %>
+    </div>
+    <li>Sample_json: <%= @sample_json %></li>
   </div>
-  <div class="links">
-    <% if current_user == @sample.user %>
-      <div><%= link_to 'Edit this sample', edit_sample_path(@sample), class: 'button' %></div>
-      <div><%= link_to 'Delete sample', sample_path(@sample), class: 'button',
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %></div>
-    <% end %>
-  </div>
-
-  <table id="table_id" class="display">
-      <thead>
-          <tr>
-              <th>Compound</th>
-              <th>PPM</th>
-          </tr>
-      </thead>
-      <tbody>
-          <tr>
-              <td>Hydrogen</td>
-              <td><%= @sample.hydrogen %></td>
-          </tr>
-          <tr>
-              <td>Oxygen</td>
-              <td><%= @sample.oxygen %></td>
-          </tr>
-          <tr>
-              <td>Nitrogen</td>
-              <td><%= @sample.nitrogen %></td>
-          </tr>
-          <tr>
-              <td>Methane</td>
-              <td><%= @sample.methane %></td>
-          </tr>
-          <tr>
-              <td>Carbon Monoxide</td>
-              <td><%= @sample.carbon_monoxide %></td>
-          </tr>
-          <tr>
-              <td>Ethane</td>
-              <td><%= @sample.ethane %></td>
-          </tr>
-          <tr>
-              <td>Carbon Dioxide</td>
-              <td><%= @sample.carbon_dioxide %></td>
-          </tr>
-          <tr>
-              <td>Ethylene</td>
-              <td><%= @sample.ethylene %></td>
-          </tr>
-          <tr>
-              <td>Acetylene</td>
-              <td><%= @sample.acetylene %></td>
-          </tr>
-      </tbody>
-  </table>
-  <li>Sample_json: <%= @sample_json %></li>
 </div>
