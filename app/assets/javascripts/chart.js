@@ -20,8 +20,13 @@ var chart = c3.generate({
     y: {
         show: true
     }
-}
-
-
-
+  },
+  axis: {
+    y: {
+      label: {
+        text: 'PPM',
+        position: 'outer-middle'
+      }
+    }
+  }
 });
