@@ -4,23 +4,21 @@
   <title>MyDGA</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= favicon_link_tag 'favicon.ico' %>
-  <%= csrf_meta_tags %>
-  <%= javascript_include_tag 'application' %>
 
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-
-
-  <nav class="top-bar">
+  <nav class="top-bar" data-topbar role= "navigation">
     <ul class="title-area">
       <li class="name">
         <h1><a href="/">MyDGA</a></h1>
-
       </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
     </ul>
 
     <section class="top-bar-section">
+
       <ul class="right">
         <li><%= link_to "Locations", locations_path %></li>
         <li><%= link_to "Transformers", transformers_path %></li>

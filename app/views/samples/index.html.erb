@@ -1,11 +1,28 @@
 <div class="row">
-  <h3>All Samples</h3>
-  <% @samples.each do |sample| %>
-    <div class="sample">
-      <li>Date: <%= link_to "#{sample.date}", sample_path(sample) %></li>
+  <div class="small-12 large-8 columns">
+    <h3>All Samples</h3>
+    <div class="datatable">
+      <table id="samples" class="display">
+          <thead>
+              <tr>
+                  <th>Sample Date</th>
+                  <th>Added by</th>
+              </tr>
+          </thead>
+          <tbody>
+    <% @samples.each do |sample| %>
+      <tr>
+          <td><%= link_to "#{sample.date}", sample_path(sample) %></td>
+          <td><%= sample.user.email %></td>
+      </tr>
+      <% end %>
+          </tbody>
+      </table>
+      <br>
     </div>
-  <% end %>
-  <div class="links">
-    <div><%= link_to "Placeholder", root_path, class: 'button' %></div>
+
+    <div class="links">
+      <div><%= link_to "Placeholder", root_path, class: 'button' %></div>
+    </div>
   </div>
 </div>

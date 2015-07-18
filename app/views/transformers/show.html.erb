@@ -1,12 +1,26 @@
 <div class="row">
+<div class="small-12 large-8 columns">
   <h2>Transformer name: <%= @transformer.name %></h2>
   <h4>Samples: </h4>
 
-  <div class="sample">
-    <% @samples.each do |sample| %>
-      <div>Sample name: <%= link_to "#{sample.date}", sample_path(sample) %></div>
-      <div>Placeholder</div>
-    <% end %>
+  <div class="datatable">
+    <table id="transformer-sample-list" class="display">
+      <thead>
+          <tr>
+              <th>Sample Date</th>
+              <th>Added by</th>
+          </tr>
+      </thead>
+      <tbody>
+      <% @samples.each do |sample| %>
+        <tr>
+            <td><%= link_to "#{sample.date}", sample_path(sample) %></td>
+            <td><%= sample.user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    </table>
+    <br>
   </div>
 
   <div class="links">
@@ -20,4 +34,5 @@
     <% end %>
 
   </div>
+</div>
 </div>

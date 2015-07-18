@@ -1,12 +1,31 @@
 <div class="row">
-  <h3>All Transformers</h3>
-  <% @transformers.each do |transformer| %>
-    <div class="transformer">
-      <li>Name: <%= link_to "#{transformer.name}", transformer_path(transformer) %></li>
-      <li>Location: <%= link_to "#{transformer.location.name}", location_path(transformer.location) %></li>
+  <div class="small-12 large-8 columns">
+    <h3>All Transformers</h3>
+    <div class="datatable">
+      <table id="transformers" class="display">
+        <thead>
+            <tr>
+                <th>Transformer Name</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+        <% @transformers.each do |transformer| %>
+          <tr>
+              <td><%= link_to "#{transformer.name}", transformer_path(transformer) %></td>
+              <td><%= transformer.kind %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      </table>
+      <br>
     </div>
-  <% end %>
-  <div class="links">
-    <div><%= link_to "Placeholder", root_path, class: 'button' %></div>
+
+
+
+
+    <div class="links">
+      <div><%= link_to "Placeholder", root_path, class: 'button' %></div>
+    </div>
   </div>
 </div>
