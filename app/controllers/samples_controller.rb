@@ -8,6 +8,7 @@ class SamplesController < ApplicationController
     # @id = params[:id]
     @transformer_id = @sample.transformer_id
     @transformer = @sample.transformer
+    @sample_json = @sample.to_json
   end
 
   def new

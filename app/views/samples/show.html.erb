@@ -3,7 +3,7 @@
 
   <div id="chart"></div>
 
-  <div class="sample-show">
+  <div class="sample-show" class="small-3 columns">
       <li><strong>Transformer name: <%= @sample.transformer.name %></strong></li>
       <li><strong>Sample location: <%= @sample.transformer.location.name %></strong></li>
       <li><strong>Date: <%= @sample.date %></strong></li>
@@ -72,4 +72,5 @@
           </tr>
       </tbody>
   </table>
+  <li>Sample_json: <%= @sample_json %></li>
 </div>
