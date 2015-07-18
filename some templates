@@ -1,0 +1,19 @@
+<td><%= @sample.hydrogen %></td>
+<td><%= @sample.oxygen %></td>
+<td><%= @sample.nitrogen %></td>
+<td><%= @sample.methane %></td>
+<td><%= @sample.carbon_monoxide %></td>
+<td><%= @sample.ethane %></td>
+<td><%= @sample.carbon_dioxide %></td>
+<td><%= @sample.ethylene %></td>
+<td><%= @sample.acetylene %></td>
+
+
+<td>Oxygen: </td>
+<td>Nitrogen: </td>
+<td>Methane: </td>
+<td>Carbon Monoxide: </td>
+<td>Ethane: </td>
+<td>Carbon Dioxide: </td>
+<td>Ethylene: </td>
+<td>Acetylene: </td>
