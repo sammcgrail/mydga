@@ -1,34 +1,56 @@
+// some colours
+
+$darkblueaccent : #0d47a1;
+$accentred      : #ef5350;
+
+$success-color  : #0c5fa8;
+$warning-color  : #ff5252;
+$info-color     : #0c5fa8;
+
+$lightgrey      : #c1c4ca;
+$crimson        : #cc3333;
+
+$start-rating   : #ffc107;
+$white          : #ffffff;
+
 // nav ul:hover {
 //   background-color: #073964;
 // }
 
-.location {
-  width: 30%;
-  background-color: #eee;
-  border: 1px solid black;
-  padding: 15px;
-  margin: 15px;
+// # TOP NAV #
+.nav-divider {
+  background-color: $darkblueaccent;
+  border-top: 3px solid $accentred;
+  height: 8px;
 }
-.transformer {
-  width: 30%;
-  background-color: #eee;
-  border: 1px solid black;
-  padding: 15px;
-  margin: 15px;
+
+// # that flash msg stuf
+
+.flash.flash-success,
+.flash.flash-warning,
+.flash.flash-notice {
+  text-align: center;
+  color: white;
+  height: 30px;
+  padding-top: 3px;
+  margin-top: 15px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  align-content: center;
+  border-radius: 20px;
 }
-.sample {
-  width: 30%;
-  background-color: #eee;
-  border: 1px solid black;
-  padding: 15px;
-  margin: 15px;
+
+.flash.flash-notice {
+  background-color: $info-color;
 }
-.sample-show {
-  width: 30%;
-  background-color: #eee;
-  border: 1px solid black;
-  padding: 15px;
-  margin: 15px;
+
+.flash.flash-success {
+  background-color: $success-color;
+}
+
+.flash.flash-warning {
+  background-color: $warning-color;
 }
 
 .not_logged_in {
@@ -36,6 +58,7 @@
   padding-top: 50px;
 }
 
+// ####
 
 // c3
 #chart .c3-line {
