@@ -67,6 +67,8 @@ gem "d3-rails"
 #c3
 gem 'c3-rails'
 
+gem 'gon'
+
 # heroku
 gem 'rails_12factor', group: [:production, :staging]
 gem 'puma'

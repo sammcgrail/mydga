@@ -9,6 +9,7 @@ class SamplesController < ApplicationController
     @transformer_id = @sample.transformer_id
     @transformer = @sample.transformer
     @sample_json = @sample.to_json
+    gon.sample = @sample
   end
 
   def new

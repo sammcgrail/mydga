@@ -3,11 +3,11 @@
 var chart = c3.generate({
     bindto: document.getElementById('csv_chart'),
     data: {
-      columns: [
-        ['Single Compound', 3, 139, 79, 92, 106, 101],
-
+      rows: [
+        ['Hydrogen', 'Oxygen', 'Nitrogen', 'Methane', 'Carbon Monoxide', 'Ethane', 'Ethylene', 'Carbon Dioxide', 'Acetylene'],
+        [gon.sample.hydrogen, gon.sample.oxygen, gon.sample.nitrogen, gon.sample.methane, gon.sample.carbon_monoxide, gon.sample.ethane, gon.sample.ethylene, gon.sample.carbon_dioxide, gon.sample.acetylene],
       ],
-      type: 'line'
+      type: 'bar'
     },
     grid: {
     x: {
