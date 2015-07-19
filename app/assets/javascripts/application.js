@@ -42,7 +42,7 @@ $(document).ready( function () {
 
    $('#samples').DataTable({
      "paging":   false,
-     "info":     false
+     "info":     false,
    } );
 
 } );
