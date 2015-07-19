@@ -27,18 +27,15 @@
     <br>
   </div>
 
-
-
-
-
-
   <div class="links">
     <div><%= link_to "Add transformer to #{@location.name}", new_location_transformer_path(@id), class: 'button' %></div>
-    <% if current_user == @location.user %>
+    <% if current_user == @location.user || current_user.try(:admin?) %>
       <div><%= link_to 'Edit this location', edit_location_path(@location), class: 'button' %></div>
-      <div><%= link_to 'Delete location', location_path(@location), class: 'button',
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %></div>
+      <% if current_user.try(:admin?) %>
+          <div><%= link_to 'Delete location', location_path(@location), class: 'button',
+            method: :delete,
+            data: { confirm: 'Are you sure?' } %></div>
+      <% end %>
     <% end %>
   </div>
 </div>

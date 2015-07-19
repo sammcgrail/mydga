@@ -22,17 +22,17 @@
     </table>
     <br>
   </div>
-
   <div class="links">
     <div><%= link_to "Add sample to #{@transformer.name}", new_transformer_sample_path(@id), class: 'button' %></div>
     <div><%= link_to "Back to transformer location: #{@transformer.location.name}", location_path(@transformer.location), class: 'button' %></div>
-    <% if current_user == @transformer.user %>
+    <% if current_user == @transformer.user || current_user.try(:admin?) %>
       <div><%= link_to 'Edit this transformer', edit_location_transformer_path(@location, @transformer), class: 'button' %></div>
-      <div><%= link_to 'Delete transformer', location_transformer_path(@location, @transformer), class: 'button',
-        method: :delete,
-        data: { confirm: 'Are you sure?' } %></div>
+      <% if current_user.try(:admin?) %>
+        <div><%= link_to 'Delete transformer', location_transformer_path(@location, @transformer), class: 'button',
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %></div>
+      <% end %>
     <% end %>
-
   </div>
 </div>
 </div>

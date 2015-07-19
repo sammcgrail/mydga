@@ -52,11 +52,13 @@
       <br>
     </div>
     <div class="links">
-      <% if current_user == @sample.user %>
+      <% if current_user == @sample.user || current_user.try(:admin?)  %>
         <div><%= link_to 'Edit this sample', edit_sample_path(@sample), class: 'button' %></div>
+            <% if current_user.try(:admin?) %>
         <div><%= link_to 'Delete sample', sample_path(@sample), class: 'button',
           method: :delete,
           data: { confirm: 'Are you sure?' } %></div>
+        <% end %>
       <% end %>
     </div>
     <li>Sample_json: <%= @sample_json %></li>
