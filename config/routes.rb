@@ -12,6 +12,12 @@ Rails.application.routes.draw do
 
   resources :samples
 
+  resources :data_files do
+    member do
+      get 'download'
+    end
+  end
+
   get 'graph/index'
   get 'graph/data', :defaults => { :format => 'json' }
 

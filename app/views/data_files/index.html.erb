@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="small-12 large-8 columns">
+    <h3>All Datafiles</h3>
+    <div class="datatable">
+      <table id="data_files" class="display">
+          <thead>
+              <tr>
+                  <th>Data_files</th>
+                  <th>Added by</th>
+              </tr>
+          </thead>
+          <tbody>
+    <% @data_files.each do |data_file| %>
+      <tr>
+          <td><%= link_to "#{data_file.name}", data_file_path(data_file) %></td>
+          <td><%= data_file.user.email %></td>
+      </tr>
+      <% end %>
+          </tbody>
+      </table>
+      <br>
+    </div>
+
+    <div class="links">
+      <div><%= link_to "Placeholder", root_path, class: 'button' %></div>
+    </div>
+  </div>
+</div>
