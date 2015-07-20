@@ -58,8 +58,11 @@ gem 'jquery-datatables-rails', '~> 3.3.0'
 gem 'coveralls', require: false
 
 # s3
-gem 'fog'
 gem 'carrierwave'
+gem 'fog'
+group :development, :test do
+  gem "dotenv-rails"
+end
 
 # d3
 gem "d3-rails"
