@@ -3,6 +3,9 @@
     <h1>Datafile show page</h1>
     <li>Datafile ID: <%= @data_file.id %></li>
     <li>Datafile uploaded by: <%= @data_file.user.email %></li>
+    <div id="data_file_chart"></div>
+    
     <li>Datafile CSV URL: <%= @data_file.csv_file %></li>
-        <li>Datafile CSV URL: <%= @data_file.sample_id %></li>
+    <li>Datafile CSV URL: <%= @data_file.sample_id %></li>
+    <li>File: <%= @file %></li>
 </div>

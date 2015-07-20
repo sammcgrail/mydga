@@ -5,6 +5,9 @@ class DataFilesController < ApplicationController
 
   def show
     @data_file = DataFile.find(params[:id])
+    url = @data_file.csv_file.url
+    @file = CSV.parse(open(url))
+    gon.file = @file
   end
 
   def new
@@ -21,7 +24,6 @@ class DataFilesController < ApplicationController
       render :new, notice: "Your Data File could not be saved."
     end
   end
-
 
   def download
     @data_file = DataFile.find(params[:id])
