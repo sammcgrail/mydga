@@ -1,5 +1,3 @@
-
-
 var chart = c3.generate({
     bindto: document.getElementById('csv_chart'),
     data: {
