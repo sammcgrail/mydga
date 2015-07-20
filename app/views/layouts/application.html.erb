@@ -4,8 +4,8 @@
   <title>MyDGA</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= favicon_link_tag 'favicon.ico' %>
-
   <%= csrf_meta_tags %>
+  <%= include_gon %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
@@ -20,6 +20,7 @@
     <section class="top-bar-section">
 
       <ul class="right">
+        <li><%= link_to "Data files", data_files_path %></li>
         <li><%= link_to "Locations", locations_path %></li>
         <li><%= link_to "Transformers", transformers_path %></li>
         <li><%= link_to "Samples", samples_path %></li>

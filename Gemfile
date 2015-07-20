@@ -1,3 +1,7 @@
+require 'csv'
+require 'open-uri'
+require 'csv'
+
 source 'https://rubygems.org'
 
 ## start make it so
@@ -63,12 +67,17 @@ gem 'fog'
 group :development, :test do
   gem "dotenv-rails"
 end
+# csv stuff
+
+
 
 # d3
 gem "d3-rails"
 
 #c3
 gem 'c3-rails'
+
+gem 'gon'
 
 # heroku
 gem 'rails_12factor', group: [:production, :staging]
