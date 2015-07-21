@@ -79,6 +79,11 @@ gem 'c3-rails'
 
 gem 'gon'
 
+#chartkick
+gem 'groupdate'
+gem 'chartkick'
+
+
 # heroku
 gem 'rails_12factor', group: [:production, :staging]
 gem 'puma'

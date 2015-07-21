@@ -11,5 +11,12 @@
       <div><%= link_to "Upload New .csv File", new_data_file_path, class: 'button' %></div>
     </div>
     <div id="csv_file_chart"></div>
+    <%= bar_chart DataFile.group(:csv_file).count %>
+    <%= timeline [
+  ["Boston", "1789-04-29", "1797-03-03"],
+  ["Miami", "1797-03-03", "1801-03-03"],
+  ["Chicago", "1801-03-03", "1809-03-03"]
+] %>
+
   </div>
 </div>

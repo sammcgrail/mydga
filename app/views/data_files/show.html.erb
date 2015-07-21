@@ -6,6 +6,15 @@
     <div id="data_file_chart"></div>
     <li>Datafile CSV URL: <%= @data_file.csv_file %></li>
     <li>Datafile CSV URL: <%= @data_file.sample_id %></li>
+
+    <%= line_chart [
+      {name: @compound_names[0], data: "12"},
+      {name: @compound_names[1], data: "20"}
+    ] %>
+
+    <li>first value in bar chart: </li>
+    <%= bar_chart({@compound_names[0] => @values[0][0], @compound_names[1] => @values[0][1]}) %>
+
     <li>File: <%= @file %></li>
     <li>Json: <%= @file_json %></li>
 </div>

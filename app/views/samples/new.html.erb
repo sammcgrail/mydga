@@ -5,13 +5,9 @@
     <%= form_for ([@transformer,@sample]) do |f| %>
 
       <% if @sample.errors.any? %>
-        <p>
-          <ul>
           <% @sample.errors.full_messages.each do |msg| %>
             <li><%= msg %></li>
           <% end %>
-          </ul>
-        </p>
       <% end %>
 
       <p>
