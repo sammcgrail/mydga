@@ -13,7 +13,7 @@ if ($("#data_file_chart").length > 0) {
            gon.file[0][7],
            gon.file[0][8]
          ], //headers
-
+//hoah this needs a for loop
           [gon.file[1][0], gon.file[1][1], gon.file[1][2], gon.file[1][3], gon.file[1][4], gon.file[1][5], gon.file[1][6], gon.file[1][7], gon.file[1][8],  ], //values
           [gon.file[2][0], gon.file[2][1], gon.file[2][2], gon.file[2][3], gon.file[2][4], gon.file[2][5], gon.file[2][6], gon.file[2][7], gon.file[2][8],  ],
           [gon.file[3][0], gon.file[3][1], gon.file[3][2], gon.file[3][3], gon.file[3][4], gon.file[3][5], gon.file[3][6], gon.file[3][7], gon.file[3][8],  ],

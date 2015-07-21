@@ -7,9 +7,9 @@
       <li>Add new samples while in the field to quickly check if values are within safety limits</li>
       <li>Get alerts when other users add samples outside of IEEE interpretation levels or custom limits</li>
     </p>
-    <div class="link">
-      <div><%=link_to "Test Graphs", graph_index_path, class: 'button'  %></div>
-      <div><%=link_to "Test Data", graph_data_path, class: 'button'  %></div>
+    <div class="links">
+      <div><%= link_to "Upload New .csv File", new_data_file_path, class: 'button' %></div>
     </div>
   </div>
 </div>
+<div id="csv_file_chart"></div>
