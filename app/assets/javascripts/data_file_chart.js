@@ -6,7 +6,7 @@ if ($("#data_file_chart").length > 0) {
             gon.hydrogen,
             gon.oxygen,
             gon.nitrogen,
-            gon.methane,  
+            gon.methane,
             gon.carbon_monoxide,
             gon.ethane,
             gon.carbon_dioxide,
