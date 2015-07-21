@@ -36,8 +36,6 @@ class DataFilesController < ApplicationController
     gon.carbon_dioxide_column = gon.carbon_dioxide.unshift(gon.compound_names[6])
     gon.ethylene_column = gon.ethylene.unshift(gon.compound_names[7])
     gon.acetylene_column = gon.acetylene.unshift(gon.compound_names[8])
-
-    binding.pry
   end
 
   def new
