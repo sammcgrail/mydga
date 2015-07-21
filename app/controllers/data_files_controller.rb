@@ -15,7 +15,6 @@ class DataFilesController < ApplicationController
     @rows = @file.count - 1
     @values = @file[1..@rows]
 
-
     gon.hydrogen = @values.map {|c| c[0] }
     gon.oxygen = @values.map {|c| c[1] }
     gon.nitrogen = @values.map {|c| c[2] }
