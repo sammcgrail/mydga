@@ -19,13 +19,16 @@ class SamplesController < ApplicationController
 
   def create
     @sample = Sample.new(sample_params)
+    @transformer = Transformer.find(params[:transformer_id])
     @sample.transformer = Transformer.find(params[:transformer_id])
     @sample.user = current_user
 
     if @sample.save
-      redirect_to transformer_path(params[:transformer_id]), notice: "Sample was successfully created."
+      flash[:success] = "Sample was successfully created."
+      redirect_to transformer_path(params[:transformer_id])
     else
-      render :new, notice: "Your sample could not be saved."
+      flash[:warning] =  "Your sample could not be saved."
+      render :new
     end
   end
 

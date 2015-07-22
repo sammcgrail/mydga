@@ -21,6 +21,11 @@
 $(function(){ $(document).foundation(); });
 
 $(document).ready( function () {
+  $('#data_files').DataTable({
+    "paging":   false,
+    "info":     false
+  } );
+
    $('#locations').DataTable({
      "paging":   false,
      "info":     false
