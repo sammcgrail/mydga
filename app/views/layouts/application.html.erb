@@ -20,20 +20,22 @@
     <section class="top-bar-section">
 
       <ul class="right">
-        <li><%= link_to "Data files", data_files_path %></li>
-        <li><%= link_to "Locations", locations_path %></li>
-        <li><%= link_to "Transformers", transformers_path %></li>
-        <li><%= link_to "Samples", samples_path %></li>
+        <li><%= link_to '<i class="fa fa-info-circle"></i> About'.html_safe, about_index_path %></li>
+        <li><%= link_to '<i class="fa fa-files-o"></i> Data files'.html_safe, data_files_path %></li>
+        <li><%= link_to '<i class="fa fa-globe"></i> Locations'.html_safe, locations_path %></li>
+        <li><%= link_to '<i class="fa fa-bolt"></i> Transformers'.html_safe, transformers_path %></li>
+        <li><%= link_to '<i class="fa fa-table"></i> Samples'.html_safe, samples_path %></li>
         <%- if current_user -%>
-          <li><%= link_to "Sign Out [#{current_user.email}]", destroy_user_session_path, method: :delete %></li>
+          <li><%= link_to "<i class='fa fa-sign-out'></i> Sign Out [#{current_user.email}]".html_safe, destroy_user_session_path, method: :delete %></li>
         <%- else -%>
-          <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-          <li><%= link_to 'Log In', new_user_session_path %></li>
+          <li><%= link_to '<i class="fa fa-plus-square"></i> Sign Up'.html_safe, new_user_registration_path %></li>
+          <li><%= link_to '<i class="fa fa-sign-in"></i> Log In'.html_safe, new_user_session_path %></li>
         <%- end -%>
       </ul>
     </section>
   </nav>
-  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+    <div class="nav-divider"></div>
+  <%= javascript_include_tag '//www.google.com/jsapi', "chartkick" %>
   <%- flash.each do |key, value| -%>
     <div class="flash flash-<%= key %>">
       <%= value %>

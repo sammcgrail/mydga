@@ -88,3 +88,8 @@ gem 'chartkick'
 gem 'rails_12factor', group: [:production, :staging]
 gem 'puma'
 ruby "2.1.5"
+
+
+#styles
+
+gem "font-awesome-rails"
