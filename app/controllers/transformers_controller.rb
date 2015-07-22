@@ -17,13 +17,16 @@ class TransformersController < ApplicationController
 
   def create
     @transformer = Transformer.new(transformer_params)
+    @location = Location.find(params[:location_id])
     @transformer.location = Location.find(params[:location_id])
     @transformer.user = current_user
 
     if @transformer.save
-      redirect_to location_path(params[:location_id]), notice: "Transformer was successfully created."
+      flash[:success] = "Transformer was successfully created."
+      redirect_to location_path(params[:location_id])
     else
-      render :new, notice: "Your transformer could not be saved."
+      flash[:warning] = "Your transformer could not be saved."
+      render :new
     end
   end
 
