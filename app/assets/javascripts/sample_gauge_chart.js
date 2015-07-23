@@ -4,7 +4,7 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
       bindto: document.getElementById('sample_hydrogen_gauge_chart'),
       data: {
           columns: [
-              ['TCG', ]
+              ['data', ]
           ],
           type: 'gauge',
           onclick: function (d, i) { console.log("onclick", d, i); },
@@ -45,7 +45,7 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
       bindto: document.getElementById('sample_methane_gauge_chart'),
       data: {
           columns: [
-              ['TCG', ]
+              ['data', ]
           ],
           type: 'gauge',
           onclick: function (d, i) { console.log("onclick", d, i); },
@@ -86,7 +86,7 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
       bindto: document.getElementById('sample_acetylene_gauge_chart'),
       data: {
           columns: [
-              ['TCG', ]
+              ['data', ]
           ],
           type: 'gauge',
           onclick: function (d, i) { console.log("onclick", d, i); },
@@ -127,7 +127,7 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
       bindto: document.getElementById('sample_ethylene_gauge_chart'),
       data: {
           columns: [
-              ['TCG', ]
+              ['data', ]
           ],
           type: 'gauge',
           onclick: function (d, i) { console.log("onclick", d, i); },
@@ -142,7 +142,7 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
              show: true // to turn off the min/max labels.
          },
      min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-     max: 35,  // 100 is default
+     max: 200,  // 100 is default
      units: 'Ethylene',
      width: 39 // for adjusting arc thickness
       },
@@ -151,7 +151,7 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
           threshold: {
   //            unit: 'value', // percentage is default
   //            max: 200, // 100 is default
-              values: [50, 51, ]
+              values: [50, 100, 200]
           }
       },
       size: {
@@ -161,6 +161,47 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
   setTimeout(function () {
       sample_ethylene_gauge_chart.load({
           columns: [['data', gon.ethylene]]
+      });
+  }, 1400);
+//////////////////////////////////////////////////////////////////
+  var sample_ethane_gauge_chart = c3.generate({
+      bindto: document.getElementById('sample_ethane_gauge_chart'),
+      data: {
+          columns: [
+              ['data', ]
+          ],
+          type: 'gauge',
+          onclick: function (d, i) { console.log("onclick", d, i); },
+          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
+          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
+      },
+      gauge: {
+         label: {
+             format: function(value, ratio) {
+                 return value ;
+             },
+             show: true // to turn off the min/max labels.
+         },
+     min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+     max: 150,  // 100 is default
+     units: 'Ethane',
+     width: 39 // for adjusting arc thickness
+      },
+      color: {
+          pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',], // the four color levels for the percentage values.
+          threshold: {
+  //            unit: 'value', // percentage is default
+  //            max: 200, // 100 is default
+              values: [65, 100, 150]
+          }
+      },
+      size: {
+          height: 180
+      }
+  });
+  setTimeout(function () {
+      sample_ethane_gauge_chart.load({
+          columns: [['data', gon.ethane]]
       });
   }, 1400);
 
