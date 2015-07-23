@@ -3,7 +3,7 @@ if ($("#sample_ratio_chart").length > 0) {
       bindto: document.getElementById('sample_ratio_chart'),
       data: {
           columns: [
-              ['Hydrogen', ]
+              ['TCG', ]
           ],
           type: 'gauge',
           onclick: function (d, i) { console.log("onclick", d, i); },
@@ -18,27 +18,51 @@ if ($("#sample_ratio_chart").length > 0) {
              show: true // to turn off the min/max labels.
          },
      min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-     max: 100000, // 100 is default
+     max: 5000, // 100 is default
      units: 'Total Combustible Gas Level',
      width: 39 // for adjusting arc thickness
       },
       color: {
-          pattern: ['#FF0000', '#F97600', '#F6C600', '#60B044'], // the three color levels for the percentage values.
+          pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',], // the three color levels for the percentage values.
           threshold: {
   //            unit: 'value', // percentage is default
   //            max: 200, // 100 is default
-              values: [30, 60, 90, 100]
+              values: [720, 1920, 4630]
           }
       },
       size: {
           height: 180
       }
   });
-
   setTimeout(function () {
       sample_ratio_chart.load({
-          columns: [['data', gon.oxygen]]
+          columns: [['data', 500]]
       });
   }, 1000);
+  setTimeout(function () {
+      sample_ratio_chart.load({
+          columns: [['data', 730]]
+      });
+  }, 2000);
+  setTimeout(function () {
+      sample_ratio_chart.load({
+          columns: [['data', 1930]]
+      });
+  }, 3000);
+  setTimeout(function () {
+      sample_ratio_chart.load({
+          columns: [['data', 4629]]
+      });
+  }, 4000);
+  setTimeout(function () {
+      sample_ratio_chart.load({
+          columns: [['data', 4631]]
+      });
+  }, 5000);
+  setTimeout(function () {
+      sample_ratio_chart.load({
+          columns: [['data', 10000]]
+      });
+  }, 6000);
 
 }
