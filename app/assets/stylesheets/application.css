@@ -20,5 +20,18 @@
  */
 /*
 body {
-    background: linear-gradient(#fafafa, #dfdfdf); 
+    background: linear-gradient(#fafafa, #dfdfdf);
 }*/
+
+.top-bar .name h1 a {
+  display: inline-block;
+  width: auto;
+}
+
+.top-bar .name h1 a:hover {
+  background-color: #073964;
+}
+
+.gauge {
+  margin: 20px;
+}
