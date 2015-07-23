@@ -1,6 +1,6 @@
-if ($("#sample_ratio_chart").length > 0) {
-  var sample_ratio_chart = c3.generate({
-      bindto: document.getElementById('sample_ratio_chart'),
+if ($("#sample_level_chart").length > 0) {
+  var sample_level_chart = c3.generate({
+      bindto: document.getElementById('sample_level_chart'),
       data: {
           columns: [
               ['TCG', ]
@@ -18,7 +18,7 @@ if ($("#sample_ratio_chart").length > 0) {
              show: true // to turn off the min/max labels.
          },
      min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
-     max: 5000, // 100 is default
+     max: 4630, // 100 is default
      units: 'Total Combustible Gas Level',
      width: 39 // for adjusting arc thickness
       },
@@ -35,34 +35,30 @@ if ($("#sample_ratio_chart").length > 0) {
       }
   });
   setTimeout(function () {
-      sample_ratio_chart.load({
-          columns: [['data', 500]]
+      sample_level_chart.load({
+          columns: [['TCG', gon.hydrogen]]
       });
   }, 1000);
   setTimeout(function () {
-      sample_ratio_chart.load({
-          columns: [['data', 730]]
+      sample_level_chart.load({
+          columns: [['TCG', 730]]
       });
   }, 2000);
   setTimeout(function () {
-      sample_ratio_chart.load({
-          columns: [['data', 1930]]
+      sample_level_chart.load({
+          columns: [['TCG', 1930]]
       });
   }, 3000);
   setTimeout(function () {
-      sample_ratio_chart.load({
-          columns: [['data', 4629]]
+      sample_level_chart.load({
+          columns: [['TCG', 4629]]
       });
   }, 4000);
   setTimeout(function () {
-      sample_ratio_chart.load({
-          columns: [['data', 4631]]
+      sample_level_chart.load({
+          columns: [['TCG', 4631]]
       });
   }, 5000);
-  setTimeout(function () {
-      sample_ratio_chart.load({
-          columns: [['data', 10000]]
-      });
-  }, 6000);
+
 
 }

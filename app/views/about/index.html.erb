@@ -20,7 +20,7 @@
       </ul>
     </div>
     <div class="chartkicktest">
-      <h2>Chart test area</h2>
+      <h2>Chart playground</h2>
       <%= bar_chart DataFile.group(:csv_file).count %>
       <%= timeline [
         ["Boston", "1", "2"],
@@ -28,5 +28,6 @@
         ["Chicago", "5", "7"]
       ] %>
     </div>
+    <div id="sample_level_chart"></div>
   </div>
 </div>
