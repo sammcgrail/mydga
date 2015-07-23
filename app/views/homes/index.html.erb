@@ -1,17 +1,9 @@
 <div class="row">
-  <div class="small-12 large-8 columns">
+  <div class="small columns">
     <h2>Mini Dissolved Gas Analysis</h2>
-
-
     <div class="links">
       <div><%= link_to '<i class="fa fa-file-text"></i> Upload New .csv File'.html_safe, new_data_file_path, class: 'button' %> <%= link_to '<i class="fa fa-file-pdf-o"></i> View IEEE Standards PDF'.html_safe, '/ieeeguidelines.pdf', class: "button" %></div>
     </div>
-    <div id="csv_file_chart"></div>
-      <%= bar_chart DataFile.group(:csv_file).count %>
-      <%= timeline [
-        ["Boston", "1", "2"],
-        ["Miami", "2", "4"],
-        ["Chicago", "5", "7"]
-      ] %>
+    <div id="landing_page_chart"></div>
   </div>
 </div>

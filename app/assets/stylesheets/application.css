@@ -20,5 +20,5 @@
  */
 
 body {
-  background-color: #f8f8f8;
+    background: linear-gradient(#fafafa, #dfdfdf); /* Standard syntax */
 }

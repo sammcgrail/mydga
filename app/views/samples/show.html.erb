@@ -1,8 +1,10 @@
 <div class="row">
-  <div class="large-12 small-12 columns">
-    <h2>Sample <%= @sample.id %></h2>
+  <div class="small columns">
+    <h2>Sample ID: <%= @sample.id %></h2>
+
     <div id="chart"></div>
     <div id="csv_chart"></div>
+
     <div class="datatable">
       <table id="samples" class="display">
           <thead>
@@ -62,6 +64,5 @@
         <% end %>
       <% end %>
     </div>
-    <li>Sample_json: <%= @sample_json %></li>
   </div>
 </div>
