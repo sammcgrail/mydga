@@ -6,29 +6,52 @@ if ($("#landing_page_chart").length > 0) {
     //  },
           data: {
             url: '/testdata.csv'
+        },
+        transition: {
+            duration: 3000
+        },
+        grid: {
+        x: {
+            show: true
+        },
+        y: {
+            show: true
+        }
         }
     });
     setTimeout(function () {
         landing_page_chart.unload({
         });
-    }, 2000);
+    }, 4000);
 
     setTimeout(function () {
         landing_page_chart.load({
             url: '/testdata2.csv'
         });
-    }, 2500);
+    }, 5000);
 
     setTimeout(function () {
         landing_page_chart.unload({
         });
-    }, 6000);
+    }, 10000);
 
     setTimeout(function () {
         landing_page_chart.load({
             url: '/testdata3.csv'
         });
-    }, 6500);
+    }, 11000);
+
+    setTimeout(function () {
+        landing_page_chart.unload({
+        });
+    }, 15000);
+
+    setTimeout(function () {
+        landing_page_chart.load({
+            url: '/testdata.csv'
+        });
+    }, 16000);
+
 }
 
 

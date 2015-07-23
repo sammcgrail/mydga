@@ -1,10 +1,11 @@
 <div class="row">
   <div class="small columns">
     <h2>Sample ID: <%= @sample.id %></h2>
-
-    <div id="chart"></div>
-    <div id="csv_chart"></div>
-
+    <h3>Sample transformer: <%= @sample.transformer.name %></h3>
+    <h3>Sample location: <%= @sample.transformer.location.name %></h3>
+    <div id="sample_bar_chart"></div>
+    <div id="sample_ratio_chart"></div>
+    <div id="sample_donut_chart"></div>
     <div class="datatable">
       <table id="samples" class="display">
           <thead>
