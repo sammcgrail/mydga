@@ -6,6 +6,8 @@
 
 ## Mini Dissolved Gas Analysis
 
+![alt text](http://i.imgur.com/As4NPOq.png)
+
 <tt>http://mydga.herokuapp.com/</tt>
 
 ##### Designed for transformer substation engineers
