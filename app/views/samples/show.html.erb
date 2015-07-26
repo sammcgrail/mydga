@@ -1,19 +1,10 @@
 <div class="row">
-
   <div class="small-12 columns">
-    <h6>Sample ID: <%= @sample.id %></h6>
     <h6>Sample transformer: <%= @sample.transformer.name %></h6>
     <h6>Sample location: <%= @sample.transformer.location.name %></h6>
     <h6>Sample added by: <%= @sample.user.email %></h6>
-<h4>Single Sample DGA Levels</h4>
-
-    <div id="sample_bar_chart"></div>
-    <div id="sample_donut_chart"></div>
-    <h4>Rogers Ratios</h4>
-    <div id="sample_ratio_chart"></div>
-    <div id="sample_ratio_chart2"></div>
-
-    <h4>Dissolved Gas Concentration IEEE Condition Levels</h4>
+    <h4>Single Sample DGA Levels for</h4>
+      <h4>Dissolved Gas Concentration IEEE Condition Levels</h4>
     <div class="small-12 medium-6 large-4 columns">
       <div id="sample_hydrogen_gauge_chart" class="gauge"></div>
     </div>
@@ -35,13 +26,20 @@
     <div class="small-12 medium-6 large-4 columns">
       <div id="sample_carbon_dioxide_gauge_chart" class="gauge"></div>
     </div>
-
-
-
-
+      </div>
+<div class="row">
+  <div class="small-12 columns">
+    <h4>Rogers Ratios</h4>
+  </div>
 </div>
+  <div class="row">
+    <div class="small-4 columns"><div id="sample_ratio_r2"></div></div>
+    <div class="small-4 columns"><div id="sample_ratio_r1"></div></div>
+    <div class="small-4 columns"><div id="sample_ratio_r5"></div></div>
+  </div>
 <div class="columns">
-<div id="sample_single_gas_chart" class="gauge"></div>
+      <div id="sample_donut_chart"></div>
+<div id="sample_single_gas_chart"></div>
 </div>
 
     <div class="datatable">

@@ -10,21 +10,12 @@ if ($("#sample_donut_chart").length > 0) {
              ['Acetylene', gon.acetylene],
           ],
           type : 'donut',
-          y: {
-  tick: {
-    outer: false
-  }
       },
       donut: {
           title: "Combustibles"
       },
       color: {
-          pattern: ['#ea0628', '#fed801', '#fbab40', '#fc5525', '#ea0628'], // the three color levels for the percentage values.
-  //         threshold: {
-  // //            unit: 'value', // percentage is default
-  // //            max: 200, // 100 is default
-  //             values: [30, 60, 90, 100]
-  //         }
+          pattern: ['#ea0628', '#fed801', '#fbab40', '#fc5525', '#ea0628'],
       },
   });
 }

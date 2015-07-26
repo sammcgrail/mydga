@@ -69,27 +69,17 @@ group :development, :test do
 end
 # csv stuff
 
-
-
 # d3
 gem "d3-rails"
 
 #c3
 gem 'c3-rails'
-
 gem 'gon'
-
-#chartkick
-gem 'groupdate'
-gem 'chartkick'
-
 
 # heroku
 gem 'rails_12factor', group: [:production, :staging]
 gem 'puma'
 ruby "2.1.5"
 
-
 #styles
-
 gem "font-awesome-rails"

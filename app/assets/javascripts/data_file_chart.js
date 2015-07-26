@@ -14,6 +14,12 @@ if ($("#data_file_chart").length > 0) {
             gon.acetylene,
         ]
     },
+    subchart: {
+show: true
+},
+zoom: {
+enabled: true
+},
       grid: {
       x: {
           show: true

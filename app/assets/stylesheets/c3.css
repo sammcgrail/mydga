@@ -69,9 +69,8 @@
 
 /*-- Region --*/
 .c3-region {
-  fill: steelblue;
+  fill: red;
   fill-opacity: 0.1; }
-
 /*-- Brush --*/
 .c3-brush .extent {
   fill-opacity: 0.1; }

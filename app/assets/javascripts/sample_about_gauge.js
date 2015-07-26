@@ -6,9 +6,6 @@ if ($("#sample_about_gauge").length > 0) {
               ['TCG', ]
           ],
           type: 'gauge',
-          onclick: function (d, i) { console.log("onclick", d, i); },
-          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
       },
       gauge: {
          label: {

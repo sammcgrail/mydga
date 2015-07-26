@@ -1,6 +1,6 @@
 <div class="row">
   <div class="columns">
-    <div class="about-section"><h3>About</h3></div>
+    <h3>About</h3>
 
     <div class="info">
       <ul>
@@ -10,20 +10,21 @@
         <div>- Improves utility worker safety by alerting the user when a sample outside of recommended IEEE condition levels.</div>
       </ul>
     </div>
-
-    <div class="chartkicktest">
-      <h2>How to read these charts:</h2>
-
-      <li>Chart testing area - playground</li>
+      <h2>How to read the charts:</h2>
+      <h3>Sample DGA Single compound PPM Gauges</h3>
       <div id="sample_about_gauge"></div>
-      <li>Gas level / PPM value displayed in center</li>
-      <li>Maxiumum recommended value on the right</li>
-      <%= bar_chart DataFile.group(:csv_file).count %>
-    </div>
+      <div>Gas level / PPM value displayed in center</div>
+      <div>Maxiumum recommended value on the right</div>
 
-    <div class="about-section"><h3>Created By</h3></div>
-    <div class="info">
-      <%= link_to "Sam McGrail", "http://github.com/sammcgrail" %>
+      <h3>CSV Datafile Graph</h3>
+      <div id="landing_page_chart"></div>
+      <div>Track changes in sample data over many data points</div>
+      <div>Use the zoom feature to more closely analyze problem datapoints</div>
+
+      <br>
+      <h3>Created By</h3>
+          <%= link_to "Sam McGrail", "http://github.com/sammcgrail" %><br><br>
+      </div>
     </div>
   </div>
 </div>
