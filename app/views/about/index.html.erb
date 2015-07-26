@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="columns">
+    <div class="about-section"><h3>About</h3></div>
+
+    <div class="info">
+      <ul>
+        <div>- Designed for transformer substation engineers</div>
+        <div>- Helps to visualize complex DGA sample data in a meaningful manner</div>
+        <div>- Add new samples while in the field to confirm what type of maintenance is required.</div>
+        <div>- Improves utility worker safety by alerting the user when a sample outside of recommended IEEE condition levels.</div>
+      </ul>
+    </div>
+
+    <div class="chartkicktest">
+      <h2>How to read these charts:</h2>
+
+      <li>Chart testing area - playground</li>
+      <div id="sample_about_gauge"></div>
+      <li>Gas level / PPM value displayed in center</li>
+      <li>Maxiumum recommended value on the right</li>
+      <%= bar_chart DataFile.group(:csv_file).count %>
+    </div>
+
+    <div class="about-section"><h3>Created By</h3></div>
+    <div class="info">
+      <%= link_to "Sam McGrail", "http://github.com/sammcgrail" %>
+    </div>
+  </div>
+</div>

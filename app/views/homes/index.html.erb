@@ -1,15 +1,10 @@
 <div class="row">
-  <div class="small-12 large-8 columns">
+  <div class="small columns">
     <h2>Mini Dissolved Gas Analysis</h2>
-    <p>
-      <li>Designed for transformer substation engineers</li>
-      <li>Visualize DGA sample data in a meaningful manner</li>
-      <li>Add new samples while in the field to quickly check if values are within safety limits</li>
-      <li>Get alerts when other users add samples outside of IEEE interpretation levels or custom limits</li>
-    </p>
     <div class="links">
-      <div><%= link_to "Upload New .csv File", new_data_file_path, class: 'button' %></div>
+      <div><%= link_to '<i class="fa fa-file-text"></i> Upload New .csv File'.html_safe, new_data_file_path, class: 'button' %> <%= link_to '<i class="fa fa-file-pdf-o"></i> View IEEE Standards PDF'.html_safe, '/ieeeguidelines.pdf', class: "button" %></div>
     </div>
-    <div id="csv_file_chart"></div>
+    <div id="landing_page_chart"></div>
+    <div id="landing_page_chart2"></div>
   </div>
 </div>

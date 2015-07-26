@@ -1,5 +1,5 @@
 // some colours
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
 $darkblueaccent : #0d47a1;
 $accentred      : #ef5350;
 
@@ -13,6 +13,7 @@ $crimson        : #cc3333;
 $start-rating   : #ffc107;
 $white          : #ffffff;
 
+
 // nav ul:hover {
 //   background-color: #073964;
 // }
@@ -20,7 +21,6 @@ $white          : #ffffff;
 // # TOP NAV #
 .nav-divider {
   background-color: $darkblueaccent;
-  border-top: 3px solid $accentred;
   height: 8px;
 }
 
@@ -64,3 +64,14 @@ $white          : #ffffff;
 #chart .c3-line {
   stroke-width: 2px;
 }
+
+#landing_page_chart .c3-line {
+  stroke-width: 3px;
+}
+
+
+/// testing
+
+// .logothing:hover {
+//     background-color: #073964;
+// }

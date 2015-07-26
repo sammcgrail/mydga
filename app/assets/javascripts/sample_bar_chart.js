@@ -1,6 +1,6 @@
-if ($("#csv_chart").length > 0) {
-  var chart = c3.generate({
-      bindto: document.getElementById('csv_chart'),
+if ($("#sample_bar_chart").length > 0) {
+  var sample_bar_chart = c3.generate({
+      bindto: document.getElementById('sample_bar_chart'),
       data: {
         rows: [
           ['Hydrogen', 'Oxygen', 'Nitrogen', 'Methane', 'Carbon Monoxide', 'Ethane', 'Ethylene', 'Carbon Dioxide', 'Acetylene'],
@@ -8,6 +8,13 @@ if ($("#csv_chart").length > 0) {
         ],
         type: 'bar'
       },
+//       subchart: {
+// show: true
+// },
+// zoom: {
+// enabled: true
+// },
+
       grid: {
       x: {
           show: true
@@ -29,5 +36,5 @@ if ($("#csv_chart").length > 0) {
         }
       }
     }
-    });  
+    });
 }

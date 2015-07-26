@@ -15,9 +15,23 @@
  *= require_self
  *= require foundation_and_overrides
  *= require c3
+ *= require font-awesome
 
  */
-
+/*
 body {
-  background-color: #f8f8f8;
+    background: linear-gradient(#fafafa, #dfdfdf);
+}*/
+
+.top-bar .name h1 a {
+  display: inline-block;
+  width: auto;
+}
+
+.top-bar .name h1 a:hover {
+  background-color: #073964;
+}
+
+.gauge {
+  margin: 20px;
 }

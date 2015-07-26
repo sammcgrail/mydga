@@ -18,6 +18,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :about, only: [:index]
+
   get 'graph/index'
   get 'graph/data', :defaults => { :format => 'json' }
 

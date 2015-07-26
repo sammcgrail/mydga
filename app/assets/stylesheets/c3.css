@@ -102,10 +102,10 @@
   -webkit-box-shadow: 7px 7px 12px -9px #777777;
   -moz-box-shadow: 7px 7px 12px -9px #777777;
   box-shadow: 7px 7px 12px -9px #777777;
-  opacity: 0.9; }
+  opacity: 0.7; }
 
 .c3-tooltip tr {
-  border: 1px solid #CCC; }
+  border: 2px solid #CCC; }
 
 .c3-tooltip th {
   background-color: #aaa;
@@ -145,7 +145,7 @@
 
 .c3-chart-arcs .c3-chart-arcs-gauge-unit {
   fill: #000;
-  font-size: 16px; }
+  font-size: 10px; }
 
 .c3-chart-arcs .c3-chart-arcs-gauge-max {
   fill: #777; }

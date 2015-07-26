@@ -10,9 +10,9 @@
 
 ##### Designed for transformer substation engineers
 
-- Visualize DGA sample data in a meaningful manner
-- Add new samples while in the field to check if values are within safety limits
-- Get alerts when samples outside of IEEE interpretation levels or personal user set limits are added
+- Helps to visualize complex DGA sample data in a meaningful manner
+- Add new samples while in the field to confirm maintenance requirements.
+- Improves utility worker safety by alerting the user when an added sample is outside of recommended IEEE condition levels.
 
 #### Contribute to mydga!
 1. Fork it
