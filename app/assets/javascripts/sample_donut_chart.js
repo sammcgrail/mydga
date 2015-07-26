@@ -18,7 +18,7 @@ if ($("#sample_donut_chart").length > 0) {
           title: "Combustibles"
       },
       color: {
-          pattern: ['#a6a6a6'], // the three color levels for the percentage values.
+          pattern: ['#ea0628', '#fed801', '#fbab40', '#fc5525', '#ea0628'], // the three color levels for the percentage values.
   //         threshold: {
   // //            unit: 'value', // percentage is default
   // //            max: 200, // 100 is default

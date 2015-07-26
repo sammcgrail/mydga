@@ -7,6 +7,7 @@
             <tr>
                 <th>Transformer Name</th>
                 <th>Type</th>
+                <th>Location</th>
             </tr>
         </thead>
         <tbody>
@@ -14,6 +15,7 @@
           <tr>
               <td><%= link_to "#{transformer.name}", transformer_path(transformer) %></td>
               <td><%= transformer.kind %></td>
+              <td><%= transformer.location.name %></td>
           </tr>
         <% end %>
       </tbody>
@@ -21,7 +23,7 @@
       <br>
     </div>
     <div class="links">
-      <div><%= link_to "Placeholder", root_path, class: 'button' %></div>
+
     </div>
   </div>
 </div>
