@@ -8,7 +8,7 @@
 
 ![alt text](http://i.imgur.com/As4NPOq.png)
 
-<tt>http://mydga.herokuapp.com/</tt>
+<tt>http://mylittledga.com</tt>
 
 ##### Designed for transformer substation engineers
 
