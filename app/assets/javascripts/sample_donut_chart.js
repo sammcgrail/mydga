@@ -10,6 +10,10 @@ if ($("#sample_donut_chart").length > 0) {
              ['Acetylene', gon.acetylene],
           ],
           type : 'donut',
+          y: {
+  tick: {
+    outer: false
+  }
       },
       donut: {
           title: "Combustibles"
