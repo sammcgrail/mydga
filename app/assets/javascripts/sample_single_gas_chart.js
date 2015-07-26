@@ -25,7 +25,7 @@ if ($("#sample_single_gas_chart").length > 0) {
       },
       x: {
         label: {
-          text: 'Date'
+          text: 'Compound'
         }
       }
     }
