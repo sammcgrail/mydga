@@ -11,23 +11,19 @@
       </ul>
     </div>
 
-    <div class="about-section"><h3>Credit</h3></div>
-
-
-    <div class="info">
-      <ul>
-        <li><%= link_to "Sam McGrail", "http://github.com/sammcgrail" %></li>
-      </ul>
-    </div>
     <div class="chartkicktest">
-      <h2>Chart playground</h2>
+      <h2>How to read these charts:</h2>
+
+      <li>Chart testing area - playground</li>
+      <div id="sample_about_gauge"></div>
+      <li>Gas level / PPM value displayed in center</li>
+      <li>Maxiumum recommended value on the right</li>
       <%= bar_chart DataFile.group(:csv_file).count %>
-      <%= timeline [
-        ["Boston", "1", "2"],
-        ["Miami", "2", "4"],
-        ["Chicago", "5", "7"]
-      ] %>
     </div>
-    <div id="sample_level_chart"></div>
+
+    <div class="about-section"><h3>Created By</h3></div>
+    <div class="info">
+      <%= link_to "Sam McGrail", "http://github.com/sammcgrail" %>
+    </div>
   </div>
 </div>

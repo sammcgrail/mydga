@@ -8,6 +8,13 @@ if ($("#sample_bar_chart").length > 0) {
         ],
         type: 'bar'
       },
+//       subchart: {
+// show: true
+// },
+// zoom: {
+// enabled: true
+// },
+
       grid: {
       x: {
           show: true

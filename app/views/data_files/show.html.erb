@@ -4,14 +4,5 @@
     <li>Datafile ID: <%= @data_file.id %></li>
     <li>Datafile uploaded by: <%= @data_file.user.email %></li>
     <div id="data_file_chart"></div>
-    <div class="chartkicks">
-      <h2>chart tests</h2>
-      <%= line_chart [
-        {name: @compound_names[0], data: "1234"},
-        {name: @compound_names[1], data: "23"}
-      ] %>
-      <li>first value in bar chart: </li>
-      <%= bar_chart({@compound_names[0] => @values[0][0], @compound_names[1] => @values[1][0]}) %>
-    </div>
   </div>
 </div>

@@ -1,6 +1,6 @@
-if ($("#sample_level_chart").length > 0) {
-  var sample_level_chart = c3.generate({
-      bindto: document.getElementById('sample_level_chart'),
+if ($("#sample_about_gauge").length > 0) {
+  var sample_about_gauge = c3.generate({
+      bindto: document.getElementById('sample_about_gauge'),
       data: {
           columns: [
               ['TCG', ]
@@ -35,27 +35,27 @@ if ($("#sample_level_chart").length > 0) {
       }
   });
   setTimeout(function () {
-      sample_level_chart.load({
+      sample_about_gauge.load({
           columns: [['TCG', gon.hydrogen]]
       });
   }, 1000);
   setTimeout(function () {
-      sample_level_chart.load({
+      sample_about_gauge.load({
           columns: [['TCG', 730]]
       });
   }, 2000);
   setTimeout(function () {
-      sample_level_chart.load({
+      sample_about_gauge.load({
           columns: [['TCG', 1930]]
       });
   }, 3000);
   setTimeout(function () {
-      sample_level_chart.load({
+      sample_about_gauge.load({
           columns: [['TCG', 4629]]
       });
   }, 4000);
   setTimeout(function () {
-      sample_level_chart.load({
+      sample_about_gauge.load({
           columns: [['TCG', 4631]]
       });
   }, 5000);
