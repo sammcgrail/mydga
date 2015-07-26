@@ -78,7 +78,7 @@ if ($("#sample_about_gauge").length > 0) {
 
     data: {
         columns: [
-            ['C2H4/C2H6', .5],
+            ['C2H4/C2H6', .9],
         ],
         type: 'bar'
     },
@@ -94,7 +94,7 @@ if ($("#sample_about_gauge").length > 0) {
 
     data: {
         columns: [
-            ['C2H4/C2H6', 2],
+            ['C2H4/C2H6', .8],
         ],
         type: 'bar'
     },

@@ -49,9 +49,6 @@ if ($("#landing_page_chart").length > 0) {
         },    tooltip: {
         grouped: true // Default true
     },
-        transition: {
-            duration: 3000
-        },
         subchart: {
   show: true
   },
