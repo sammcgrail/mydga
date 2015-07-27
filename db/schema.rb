@@ -40,15 +40,15 @@ ActiveRecord::Schema.define(version: 20150720173507) do
     t.integer  "user_id",         null: false
     t.integer  "transformer_id",  null: false
     t.string   "date",            null: false
-    t.decimal  "hydrogen"
-    t.decimal  "oxygen"
-    t.decimal  "nitrogen"
-    t.decimal  "methane"
-    t.decimal  "carbon_monoxide"
-    t.decimal  "ethane"
-    t.decimal  "carbon_dioxide"
-    t.decimal  "ethylene"
-    t.decimal  "acetylene"
+    t.decimal  "hydrogen",        null: false
+    t.decimal  "oxygen",          null: false
+    t.decimal  "nitrogen",        null: false
+    t.decimal  "methane",         null: false
+    t.decimal  "carbon_monoxide", null: false
+    t.decimal  "ethane",          null: false
+    t.decimal  "carbon_dioxide",  null: false
+    t.decimal  "ethylene",        null: false
+    t.decimal  "acetylene",       null: false
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end
