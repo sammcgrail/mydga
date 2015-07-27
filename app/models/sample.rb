@@ -5,8 +5,12 @@ class Sample < ActiveRecord::Base
   validates :user_id, presence: true
   validates :transformer_id, presence: true
   validates :date, presence: true
-
-  def rogers
-
-  end
+  validates :hydrogen, presence: true
+  validates :oxygen, presence: true
+  validates :nitrogen, presence: true
+  validates :carbon_dioxide, presence: true
+  validates :carbon_monoxide, presence: true
+  validates :ethane, presence: true
+  validates :acetylene, presence: true
+  validates :ethylene, presence: true
 end
