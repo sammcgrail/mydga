@@ -7,7 +7,6 @@
             <tr>
                 <th>Transformer Name</th>
                 <th>Location</th>
-                <th>Added by</th>
             </tr>
         </thead>
         <tbody>
@@ -15,7 +14,6 @@
           <tr>
               <td><%= link_to "#{transformer.name}", transformer_path(transformer) %></td>
               <td><%= transformer.location.name %></td>
-              <td><%= transformer.user.email %></td>
           </tr>
         <% end %>
       </tbody>
