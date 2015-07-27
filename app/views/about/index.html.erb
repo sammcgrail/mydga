@@ -9,6 +9,7 @@
         <div>- Add new samples while in the field to confirm what type of maintenance is required.</div>
         <div>- Improves utility worker safety by alerting the user when a sample outside of recommended IEEE condition levels.</div>
       </ul>
+      <div><%= link_to '<i class="fa fa-file-pdf-o"></i> View IEEE Standards PDF'.html_safe, '/ieeeguidelines.pdf', class: "button tiny" %></div>
     </div>
       <h2>How to read the charts:</h2>
       <h3>Sample DGA Single compound PPM Gauges</h3>
@@ -18,14 +19,14 @@
       <div>- Single Gas level / PPM value displayed in center</div>
       <div>- Maxiumum recommended value on the right</div>
       <div>- 4 Levels: Green, Yellow, Orange, Red</div>
-      <div>- Higher levels have greater chance of fault </div>
+      <div>- Higher levels indicate greater chance of fault per IEEE guidelines </div>
       </ul>
       <h3>CSV Datafile Graph</h3>
       <div id="landing_page_chart"></div>
       <br>
       <ul>
       <div>- Track changes in sample data over many data points</div>
-      <div>- Use the zoom feature to more closely analyze problem datapoints</div>
+      <div>- Use the zoom feature to get a closer look at problem sections of data points</div>
       </ul>
       <h3>Rogers Ratio Case Codes for Single Gas</h3>
       <div class="small-4 columns"><div id="sample_about_ratio_r2"></div></div>
@@ -33,7 +34,7 @@
       <div class="small-4 columns"><div id="sample_about_ratio_r5"></div></div>
       <br>
       <ul>
-      <div>- Check if a certain key gas ratio is within allowed levels</div>
+      <div>- Check if a certain key gas ratio is within industry standardized levels</div>
       <div>- If ratio value is below red indicator, unit is normal</div>
       </ul>
 
