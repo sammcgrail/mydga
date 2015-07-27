@@ -1,32 +1,30 @@
 <div class="row">
-  <div class="small columns">
-    <br><h3 class="button large">All Samples</h3>
-    <div class="datatable">
+  <div class="small-12 columns">
+    <br><h3 class="button large">All Samples</h3></div>
+  <div class="small-12 columns">
+     <div class="datatable">
       <table id="samples" class="display">
           <thead>
               <tr>
-                  <th>Sample Date</th>
-                  <th>Added by</th>
-                  <th>Transformer</th>
-                  <th>Location</th>
+                <th>Sample Date</th>
+                <th>Added by</th>
+                <th>Transformer</th>
               </tr>
           </thead>
           <tbody>
-    <% @samples.each do |sample| %>
-      <tr>
-          <td><%= link_to "#{sample.date}", sample_path(sample) %></td>
-          <td><%= sample.user.email %></td>
-          <td><%= sample.transformer.name %></td>
-          <td><%= sample.transformer.location.name %></td>
-      </tr>
-      <% end %>
+                <% @samples.each do |sample| %>
+              <tr>
+                <td><%= link_to "#{sample.date}", sample_path(sample) %></td>
+                <td><%= sample.user.email %></td>
+                <td><%= sample.transformer.name %></td>
+              </tr>
+              <% end %>
           </tbody>
       </table>
       <br>
     </div>
-
+</div>
     <div class="links">
 
     </div>
-  </div>
 </div>

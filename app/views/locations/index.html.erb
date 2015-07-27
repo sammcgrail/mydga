@@ -7,7 +7,6 @@
           <thead>
               <tr>
                   <th>Location Name</th>
-                  <th>Lat/Long [if supplied]</th>
                   <th>Added by</th>
               </tr>
           </thead>
@@ -15,7 +14,6 @@
     <% @locations.each do |location| %>
       <tr>
           <td><%= link_to "#{location.name}", location_path(location) %></td>
-          <td><%= location.latitude %>/<%= location.longitude %></td>
           <td><%= location.user.email %></td>
       </tr>
       <% end %>

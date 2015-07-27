@@ -7,7 +7,6 @@
               <tr>
                   <th>Data_files</th>
                   <th>Added by</th>
-                  <th>Created on</th>
               </tr>
           </thead>
           <tbody>
@@ -15,7 +14,6 @@
       <tr>
           <td><%= link_to "#{data_file.name}", data_file_path(data_file) %></td>
           <td><%= data_file.user.email %></td>
-          <td><%= data_file.created_at %></td>
       </tr>
       <% end %>
           </tbody>
