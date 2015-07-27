@@ -6,9 +6,6 @@ if ($("#sample_about_gauge").length > 0) {
               ['TCG', ]
           ],
           type: 'gauge',
-          onclick: function (d, i) { console.log("onclick", d, i); },
-          onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-          onmouseout: function (d, i) { console.log("onmouseout", d, i); }
       },
       gauge: {
          label: {
@@ -59,6 +56,55 @@ if ($("#sample_about_gauge").length > 0) {
           columns: [['TCG', 4631]]
       });
   }, 5000);
+
+  var sample_ratio_r2 = c3.generate({
+    bindto: document.getElementById('sample_ratio_r2'),
+
+    data: {
+        columns: [
+            ['CH4/H2', .3],
+        ],
+        type: 'bar'
+    },
+    axis: {
+
+    },
+    regions: [
+        {axis: 'y', start: 0.1, class: 'regionY',},
+    ]
+  });
+  var sample_ratio_r1 = c3.generate({
+    bindto: document.getElementById('sample_ratio_r1'),
+
+    data: {
+        columns: [
+            ['C2H4/C2H6', .9],
+        ],
+        type: 'bar'
+    },
+    axis: {
+
+    },
+    regions: [
+        {axis: 'y', start: 0.1, class: 'regionY',},
+    ]
+  });
+  var sample_ratio_r5 = c3.generate({
+    bindto: document.getElementById('sample_ratio_r5'),
+
+    data: {
+        columns: [
+            ['C2H4/C2H6', .8],
+        ],
+        type: 'bar'
+    },
+    axis: {
+
+    },
+    regions: [
+        {axis: 'y', start: 1.0, class: 'regionY',},
+    ]
+  });
 
 
 }

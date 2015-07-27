@@ -1,19 +1,21 @@
 <div class="row">
   <div class="small columns">
-    <h3>All Transformers</h3>
+    <br><h3 class="button large">All Transformers</h3>
     <div class="datatable">
       <table id="transformers" class="display">
         <thead>
             <tr>
                 <th>Transformer Name</th>
-                <th>Type</th>
+                <th>Location</th>
+                <th>Added by</th>
             </tr>
         </thead>
         <tbody>
         <% @transformers.each do |transformer| %>
           <tr>
               <td><%= link_to "#{transformer.name}", transformer_path(transformer) %></td>
-              <td><%= transformer.kind %></td>
+              <td><%= transformer.location.name %></td>
+              <td><%= transformer.user.email %></td>
           </tr>
         <% end %>
       </tbody>
@@ -21,7 +23,7 @@
       <br>
     </div>
     <div class="links">
-      <div><%= link_to "Placeholder", root_path, class: 'button' %></div>
+
     </div>
   </div>
 </div>

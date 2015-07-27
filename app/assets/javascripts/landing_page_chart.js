@@ -8,7 +8,7 @@ if ($("#landing_page_chart").length > 0) {
             url: '/testdata.csv'
         },
         transition: {
-            duration: 3000
+            duration: 1000
         },
         subchart: {
   show: true
@@ -46,10 +46,9 @@ if ($("#landing_page_chart").length > 0) {
     //  },
           data: {
             url: '/testdata2.csv'
-        },
-        transition: {
-            duration: 3000
-        },
+        },    tooltip: {
+        grouped: true // Default true
+    },
         subchart: {
   show: true
   },

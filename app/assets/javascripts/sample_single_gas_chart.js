@@ -1,6 +1,6 @@
-if ($("#sample_bar_chart").length > 0) {
-  var sample_bar_chart = c3.generate({
-      bindto: document.getElementById('sample_bar_chart'),
+if ($("#sample_single_gas_chart").length > 0) {
+  var sample_single_gas_chart = c3.generate({
+      bindto: document.getElementById('sample_single_gas_chart'),
       data: {
         rows: [
           ['Hydrogen', 'Oxygen', 'Nitrogen', 'Methane', 'Carbon Monoxide', 'Ethane', 'Ethylene', 'Carbon Dioxide', 'Acetylene'],
@@ -25,7 +25,7 @@ if ($("#sample_bar_chart").length > 0) {
       },
       x: {
         label: {
-          text: 'Date'
+          text: 'Compound'
         }
       }
     }

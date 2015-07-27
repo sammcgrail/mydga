@@ -1,20 +1,20 @@
 <div class="row">
   <div class="small columns">
-    <h3>All Locations</h3>
+    <br><h3 class="button large">All Locations</h3>
 
     <div class="datatable">
       <table id="locations" class="display">
           <thead>
               <tr>
                   <th>Location Name</th>
-                  <th>Lat/Long [if supplied]</th>
+                  <th>Added by</th>
               </tr>
           </thead>
           <tbody>
     <% @locations.each do |location| %>
       <tr>
           <td><%= link_to "#{location.name}", location_path(location) %></td>
-          <td><%= location.latitude %>/<%= location.longitude %></td>
+          <td><%= location.user.email %></td>
       </tr>
       <% end %>
           </tbody>

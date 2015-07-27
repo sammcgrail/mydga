@@ -13,7 +13,7 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
              format: function(value, ratio) {
                  return value ;
              },
-             show: true // to turn off the min/max labels.
+             show: true
          },
      min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
      max: 1800,  // 100 is default
@@ -37,79 +37,83 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
           columns: [['Hydrogen', gon.hydrogen]]
       });
   }, 1000);
-//////////////////////////////////////////////////////////////////
-  var sample_methane_gauge_chart = c3.generate({
-      bindto: document.getElementById('sample_methane_gauge_chart'),
-      data: {
-          columns: [
-              ['data', ]
-          ],
-          type: 'gauge',
-      },
-      gauge: {
-         label: {
-             format: function(value, ratio) {
-                 return value ;
-             },
-             show: true
-         },
-     min: 0,
-     max: 1000,
-     units: 'Methane',
-     width: 39
-      },
-      color: {
-          pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',],
-          threshold: {
-              values: [120, 400, 1000]
-          }
-      },
-      size: {
-          height: 180
-      }
-  });
-  setTimeout(function () {
-      sample_methane_gauge_chart.load({
-          columns: [['Methane', gon.methane]]
-      });
-  }, 1200);
-//////////////////////////////////////////////////////////////////
-  var sample_acetylene_gauge_chart = c3.generate({
-      bindto: document.getElementById('sample_acetylene_gauge_chart'),
-      data: {
-          columns: [
-              ['data', ]
-          ],
-          type: 'gauge',
-      },
-      gauge: {
-         label: {
-             format: function(value, ratio) {
-                 return value ;
-             },
-             show: true
-         },
-     min: 0,
-     max: 35,
-     units: 'Acetylene',
-     width: 39
-      },
-      color: {
-          pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',],
-          threshold: {
-              values: [1, 9, 35]
-          }
-      },
-      size: {
-          height: 180
-      }
-  });
-  setTimeout(function () {
-      sample_acetylene_gauge_chart.load({
-          columns: [['Acetylene', gon.acetylene]]
-      });
-  }, 1400);
-//////////////////////////////////////////////////////////////////
+
+    var sample_methane_gauge_chart = c3.generate({
+        bindto: document.getElementById('sample_methane_gauge_chart'),
+        data: {
+            columns: [
+                ['data', ]
+            ],
+            type: 'gauge',
+        },
+        gauge: {
+           label: {
+               format: function(value, ratio) {
+                   return value ;
+               },
+               show: true
+           },
+       min: 0,
+       max: 1000,
+       units: 'Methane',
+       width: 39
+        },
+        color: {
+            pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',],
+            threshold: {
+                values: [120, 400, 1000]
+            }
+        },
+        size: {
+            height: 180
+        }
+    });
+      setTimeout(function () {
+          sample_methane_gauge_chart.load({
+              columns: [['Methane', gon.methane]]
+          });
+      }, 1200);
+        var sample_ethane_gauge_chart = c3.generate({
+            bindto: document.getElementById('sample_ethane_gauge_chart'),
+            data: {
+                columns: [
+                    ['data', ]
+                ],
+                type: 'gauge',
+            },
+            gauge: {
+               label: {
+                   format: function(value, ratio) {
+                       return value ;
+                   },
+                   show: true
+               },
+           min: 0,
+           max: 150,
+           units: 'Ethane',
+           width: 39
+            },
+            color: {
+                pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',],
+                threshold: {
+                    values: [65, 100, 150]
+                }
+            },
+            size: {
+                height: 180
+            }
+        });
+        setTimeout(function () {
+            sample_ethane_gauge_chart.load({
+                columns: [['Ethane', gon.ethane]]
+            });
+        }, 1400);
+
+
+
+
+
+
   var sample_ethylene_gauge_chart = c3.generate({
       bindto: document.getElementById('sample_ethylene_gauge_chart'),
       data: {
@@ -145,9 +149,9 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
           columns: [['Ethylene', gon.ethylene]]
       });
   }, 1600);
-//////////////////////////////////////////////////////////////////
-  var sample_ethane_gauge_chart = c3.generate({
-      bindto: document.getElementById('sample_ethane_gauge_chart'),
+
+  var sample_acetylene_gauge_chart = c3.generate({
+      bindto: document.getElementById('sample_acetylene_gauge_chart'),
       data: {
           columns: [
               ['data', ]
@@ -162,14 +166,14 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
              show: true
          },
      min: 0,
-     max: 150,
-     units: 'Ethane',
+     max: 35,
+     units: 'Acetylene',
      width: 39
       },
       color: {
           pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',],
           threshold: {
-              values: [65, 100, 150]
+              values: [1, 9, 35]
           }
       },
       size: {
@@ -177,12 +181,10 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
       }
   });
   setTimeout(function () {
-      sample_ethane_gauge_chart.load({
-          columns: [['Ethane', gon.ethane]]
+      sample_acetylene_gauge_chart.load({
+          columns: [['Acetylene', gon.acetylene]]
       });
   }, 1800);
-
-//////////////////////////////////////////////////////////////////
   var sample_carbon_monoxide_gauge_chart = c3.generate({
       bindto: document.getElementById('sample_carbon_monoxide_gauge_chart'),
       data: {
@@ -219,145 +221,41 @@ if ($("#sample_hydrogen_gauge_chart").length > 0) {
       });
   }, 2000);
 
-//////////////////////////////////////////////////////////////////
-  var sample_carbon_dioxide_gauge_chart = c3.generate({
-      bindto: document.getElementById('sample_carbon_dioxide_gauge_chart'),
-      data: {
-          columns: [
-              ['Carbon Dioxide', ]
-          ],
-          type: 'gauge',
-      },
-      gauge: {
-         label: {
-             format: function(value, ratio) {
-                 return value ;
-             },
-             show: true
-         },
-     min: 0,
-     max: 10000,
-     units: 'Carbon Dioxide',
-     width: 39
-      },
-      color: {
-          pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',],
-          threshold: {
-  //            unit: 'value', // percentage is default
-  //            max: 200,
-              values: [2500, 4000, 10000]
-          }
-      },
-      size: {
-          height: 180
-      }
-  });
-  setTimeout(function () {
-      sample_carbon_dioxide_gauge_chart.load({
-          columns: [['Carbon Dioxide', gon.carbon_dioxide]]
-      });
-  }, 2200);
-
-
-
-
-
-/// c3 close
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-// // christina code
-//
-// var sample_ethylene_gauge_chart = generateChart("Hydrogen")
-//
-//
-//
-// var generateChart = function(arg1, arg2) {
-//   c3.generate({
-//       bindto: document.getElementById('sample_hydrogen_gauge_chart'),
-//       data: {
-//           columns: [
-//               ['data', ]
-//           ],
-//           type: 'gauge',
-//           onclick: function (d, i) { console.log("onclick", d, i); },
-//           onmouseover: function (d, i) { console.log("onmouseover", d, i); },
-//           onmouseout: function (d, i) { console.log("onmouseout", d, i); }
-//       },
-//       gauge: {
-//          label: {
-//              format: function(value, ratio) {
-//                  return value ;
-//              },
-//              show: true
-//          },
-//      min: 0,
-//      max: 1800,
-//      units: arg1,
-//      width: 39
-//       },
-//       color: {
-//           pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',], // the four color levels for the percentage values.
-//           threshold: {
-//   //            unit: 'value', // percentage is default
-//   //            max: 200,
-//               values: [100, 700, 1800]
-//           }
-//       },
-//       size: {
-//           height: 180
-//       }
-//   });
-//   setTimeout(function () {
-//       sample_hydrogen_gauge_chart.load({
-//           columns: [['data', gon.hydrogen]]
-//       });
-//   }, 1000);
-// }
+  // var sample_carbon_dioxide_gauge_chart = c3.generate({
+  //     bindto: document.getElementById('sample_carbon_dioxide_gauge_chart'),
+  //     data: {
+  //         columns: [
+  //             ['Carbon Dioxide', ]
+  //         ],
+  //         type: 'gauge',
+  //     },
+  //     gauge: {
+  //        label: {
+  //            format: function(value, ratio) {
+  //                return value ;
+  //            },
+  //            show: true
+  //        },
+  //    min: 0,
+  //    max: 10000,
+  //    units: 'Carbon Dioxide',
+  //    width: 39
+  //     },
+  //     color: {
+  //         pattern: [ '#60B044','#F6C600', '#F97600',  '#FF0000',],
+  //         threshold: {
+  // //            unit: 'value', // percentage is default
+  // //            max: 200,
+  //             values: [2500, 4000, 10000]
+  //         }
+  //     },
+  //     size: {
+  //         height: 180
+  //     }
+  // });
+  // setTimeout(function () {
+  //     sample_carbon_dioxide_gauge_chart.load({
+  //         columns: [['Carbon Dioxide', gon.carbon_dioxide]]
+  //     });
+  // }, 2200);

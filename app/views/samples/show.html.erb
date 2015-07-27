@@ -1,33 +1,47 @@
 <div class="row">
   <div class="small-12 columns">
-    <h2>Sample ID: <%= @sample.id %></h2>
-    <h3>Sample transformer: <%= @sample.transformer.name %></h3>
-    <h3>Sample location: <%= @sample.transformer.location.name %></h3>
-    <h3>Sample added by: <%= @sample.user.email %></h3>
-    <div id="sample_bar_chart"></div>
-    <div id="sample_donut_chart"></div>
+    <br>
+    <h6 class="button tiny">Sample transformer: <%= @sample.transformer.name %></h6>
+    <h6 class="button tiny">Sample location: <%= @sample.transformer.location.name %></h6>
+    <h6 class="button tiny">Sample added by: <%= @sample.user.email %></h6>
 
-    <div class="small-12 medium-6 large-3 columns">
-      <div id="sample_hydrogen_gauge_chart" class="gauge"></div>
-    </div>
-    <div class="small-12 medium-6 large-3 columns">
-      <div id="sample_methane_gauge_chart" class="gauge"></div>
-    </div>
-    <div class="small-12 medium-6 large-3 columns">
-      <div id="sample_ethane_gauge_chart" class="gauge"></div>
-    </div>
-    <div class="small-12 medium-6 large-3 columns">
-      <div id="sample_ethylene_gauge_chart" class="gauge"></div>
-    </div>
-    <div class="small-12 medium-6 large-3 columns">
-      <div id="sample_acetylene_gauge_chart" class="gauge"></div>
-    </div>
-    <div class="small-12 medium-6 large-3 columns">
-      <div id="sample_carbon_monoxide_gauge_chart" class="gauge"></div>
-    </div>
-    <div class="small-12 medium-6 large-3 columns">
-      <div id="sample_carbon_dioxide_gauge_chart" class="gauge"></div>
-    </div>
+      <h4>Dissolved Gas Concentration IEEE Condition Levels</h4>
+      <div class="small-12 medium-6 large-4 columns">
+        <div id="sample_hydrogen_gauge_chart" class="gauge"></div>
+      </div>
+      <div class="small-12 medium-6 large-4 columns">
+        <div id="sample_methane_gauge_chart" class="gauge"></div>
+      </div>
+      <div class="small-12 medium-6 large-4 columns">
+        <div id="sample_ethane_gauge_chart" class="gauge"></div>
+      </div>
+      <div class="small-12 medium-6 large-4 columns">
+        <div id="sample_ethylene_gauge_chart" class="gauge"></div>
+      </div>
+      <div class="small-12 medium-6 large-4 columns">
+        <div id="sample_acetylene_gauge_chart" class="gauge"></div>
+      </div>
+      <div class="small-12 medium-6 large-4 columns">
+        <div id="sample_carbon_monoxide_gauge_chart" class="gauge"></div>
+      </div>
+</div>
+      </div>
+
+  <div class="row">
+    <div class="small-12 columns"><h4>Rogers Ratios</h4><br></div>
+    <div class="small-4 columns"><div id="sample_ratio_r2"></div></div>
+    <div class="small-4 columns"><div id="sample_ratio_r1"></div></div>
+    <div class="small-4 columns"><div id="sample_ratio_r5"></div></div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns"><h4>Total Sample Content</h4><br></div>
+    <div class="small-6 columns"><div id="sample_donut_chart"></div></div>
+    <div class="small-6 columns"><div id="sample_single_gas_chart"></div></div>
+  </div>
+
+<div class="row">
+<div class="small-12 columns">
 
     <div class="datatable">
       <table id="samples" class="display">
@@ -78,15 +92,16 @@
       </table>
       <br>
     </div>
-    <div class="links">
-      <% if current_user == @sample.user || current_user.try(:admin?)  %>
-        <div><%= link_to 'Edit this sample', edit_sample_path(@sample), class: 'button' %></div>
-            <% if current_user.try(:admin?) %>
-        <div><%= link_to 'Delete sample', sample_path(@sample), class: 'button',
-          method: :delete,
-          data: { confirm: 'Are you sure?' } %></div>
-        <% end %>
-      <% end %>
-    </div>
   </div>
+  <div class="links">
+    <% if current_user == @sample.user || current_user.try(:admin?)  %>
+      <div><%= link_to 'Edit this sample', edit_sample_path(@sample), class: 'button' %></div>
+          <% if current_user.try(:admin?) %>
+      <div><%= link_to 'Delete sample', sample_path(@sample), class: 'button',
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 </div>

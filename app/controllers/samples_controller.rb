@@ -20,6 +20,11 @@ class SamplesController < ApplicationController
     gon.ethylene = @sample.ethylene
     gon.carbon_dioxide = @sample.carbon_dioxide
     gon.acetylene = @sample.acetylene
+
+    gon.r1 = @sample.acetylene / @sample.ethylene
+    gon.r2 = @sample.methane / @sample.hydrogen
+    gon.r3 = @sample.ethylene / @sample.ethane
+
   end
 
   def new
