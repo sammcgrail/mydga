@@ -33,7 +33,7 @@ if ($("#sample_about_gauge").length > 0) {
   });
   setTimeout(function () {
       sample_about_gauge.load({
-          columns: [['TCG', gon.hydrogen]]
+          columns: [['TCG', 57]]
       });
   }, 1000);
   setTimeout(function () {
