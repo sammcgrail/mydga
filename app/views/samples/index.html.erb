@@ -7,6 +7,8 @@
               <tr>
                   <th>Sample Date</th>
                   <th>Added by</th>
+                  <th>Transformer</th>
+                  <th>Location</th>
               </tr>
           </thead>
           <tbody>
@@ -14,6 +16,8 @@
       <tr>
           <td><%= link_to "#{sample.date}", sample_path(sample) %></td>
           <td><%= sample.user.email %></td>
+          <td><%= sample.transformer.name %></td>
+          <td><%= sample.transformer.location.name %></td>
       </tr>
       <% end %>
           </tbody>
