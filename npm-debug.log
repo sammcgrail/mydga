@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.12.1
+3 info using node@v0.12.7
+4 verbose node symlink /usr/local/bin/node
+5 verbose config Skipping project config: /Users/sammcgrail/.npmrc. (matches userconfig)
+6 verbose readDependencies loading dependencies from /Users/sammcgrail/package.json
+7 error install Couldn't read dependencies
+8 verbose stack Error: ENOENT, open '/Users/sammcgrail/package.json'
+8 verbose stack     at Error (native)
+9 verbose cwd /Users/sammcgrail/mydga
+10 error Darwin 14.5.0
+11 error argv "node" "/usr/local/bin/npm" "install"
+12 error node v0.12.7
+13 error npm  v2.12.1
+14 error path /Users/sammcgrail/package.json
+15 error code ENOPACKAGEJSON
+16 error errno -2
+17 error package.json ENOENT, open '/Users/sammcgrail/package.json'
+17 error package.json This is most likely not a problem with npm itself.
+17 error package.json npm can't find a package.json file in your current directory.
+18 verbose exit [ -2, true ]
