@@ -24,7 +24,7 @@ feature 'user adds a location', %{
 
     fill_in 'Name', with: 'Boston -test'
 
-    click_button 'Create Location'
+    click_button "Add Location"
 
     expect(page).to have_content("Boston -test")
   end
