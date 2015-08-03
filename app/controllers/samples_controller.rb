@@ -10,6 +10,7 @@ class SamplesController < ApplicationController
     @transformer = @sample.transformer
     @sample_json = @sample.to_json
     gon.sample = @sample
+
     # move these to model
     gon.hydrogen = @sample.hydrogen
     gon.oxygen = @sample.oxygen
@@ -20,11 +21,9 @@ class SamplesController < ApplicationController
     gon.ethylene = @sample.ethylene
     gon.carbon_dioxide = @sample.carbon_dioxide
     gon.acetylene = @sample.acetylene
-
     gon.r1 = @sample.acetylene / @sample.ethylene
     gon.r2 = @sample.methane / @sample.hydrogen
     gon.r3 = @sample.ethylene / @sample.ethane
-
   end
 
   def new
