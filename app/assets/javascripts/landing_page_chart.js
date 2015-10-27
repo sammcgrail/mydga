@@ -79,38 +79,38 @@ if ($("#landing_page_chart").length > 0) {
       }
     });
 
-    // setTimeout(function () {
-    //     landing_page_chart.unload({
-    //     });
-    // }, 4000);
-    //
-    // setTimeout(function () {
-    //     landing_page_chart.load({
-    //         url: '/testdata2.csv'
-    //     });
-    // }, 5000);
+    setTimeout(function () {
+        landing_page_chart.unload({
+        });
+    }, 4000);
 
-    // setTimeout(function () {
-    //     landing_page_chart.unload({
-    //     });
-    // }, 10000);
-    //
-    // setTimeout(function () {
-    //     landing_page_chart.load({
-    //         url: '/testdata3.csv'
-    //     });
-    // }, 11000);
-    //
-    // setTimeout(function () {
-    //     landing_page_chart.unload({
-    //     });
-    // }, 15000);
-    //
-    // setTimeout(function () {
-    //     landing_page_chart.load({
-    //         url: '/testdata.csv'
-    //     });
-    // }, 16000);
+    setTimeout(function () {
+        landing_page_chart.load({
+            url: '/testdata2.csv'
+        });
+    }, 5000);
+
+    setTimeout(function () {
+        landing_page_chart.unload({
+        });
+    }, 10000);
+
+    setTimeout(function () {
+        landing_page_chart.load({
+            url: '/testdata3.csv'
+        });
+    }, 11000);
+
+    setTimeout(function () {
+        landing_page_chart.unload({
+        });
+    }, 15000);
+
+    setTimeout(function () {
+        landing_page_chart.load({
+            url: '/testdata.csv'
+        });
+    }, 16000);
 
 }
 
