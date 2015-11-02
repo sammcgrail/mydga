@@ -512,32 +512,13 @@ if ($("#landing_page_chart").length > 0) {
         	"date": "2015-11-02 11:26:07",
         	"temp": 25
         }
-],
-        keys: {
-            value: ['temp', 'date']
-        }
-    },
-    axis: {
-        x: {
-            type: 'timeseries',
-            tick: {
-                  format: "%Y-%m-%d %H:%M:%S",
-                  format: function (x) {
-                    return x.getFullYear();
-                }
-            }
-            }
-        },
-        subchart: {
-        show: true
-    },
-        zoom: {
-        enabled: true
-    },
-      line:     {width: {ratio: 0.5}},
-      tooltip:  {grouped: true},
-      subchart: {show: true},
-      zoom:     {enabled: true},
-      grid:     {x: {show: true},
-                 y: {show: true}},
+        ],
+            keys: {value: ['temp', 'date']}},
+            axis: {x: {type: 'timeseries', tick: {format: "%Y-%m-%d %H:%M:%S"}}},
+            line:     {width: {ratio: 0.5}},
+            tooltip:  {grouped: true},
+            subchart: {show: false},
+            zoom:     {enabled: true},
+            grid:     {x: {show: true},
+                       y: {show: true}},
 });}
