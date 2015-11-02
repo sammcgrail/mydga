@@ -522,9 +522,12 @@ if ($("#landing_page_chart").length > 0) {
             type: 'timeseries',
             tick: {
                   format: "%Y-%m-%d %H:%M:%S",
+                  format: function (x) {
+                    return x.getFullYear();
+                }
             }
-        }
-    },
+            }
+        },
         subchart: {
         show: true
     },
