@@ -11,11 +11,11 @@ if ($("#landing_page_chart").length > 0) {
             duration: 1000
         },
         subchart: {
-  show: true
-  },
-  zoom: {
-  enabled: true
-  },
+          show: true
+          },
+          zoom: {
+          enabled: true
+          },
         grid: {
         x: {
             show: true
@@ -50,11 +50,11 @@ if ($("#landing_page_chart").length > 0) {
         grouped: true // Default true
     },
         subchart: {
-  show: true
-  },
-  zoom: {
-  enabled: true
-  },
+          show: true
+          },
+          zoom: {
+          enabled: true
+          },
         grid: {
         x: {
             show: true
