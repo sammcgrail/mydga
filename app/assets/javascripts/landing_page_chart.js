@@ -1,43 +1,43 @@
 if ($("#landing_page_chart").length > 0) {
-  var landing_page_chart = c3.generate({
-      bindto: document.getElementById('landing_page_chart'),
-    //   size: {
-    //   width: 1200
-    //  },
-          data: {
-            url: '/testdata.csv'
-        },
-        transition: {
-            duration: 1000
-        },
-        subchart: {
-          show: true
-          },
-          zoom: {
-          enabled: true
-          },
-        grid: {
-        x: {
-            show: true
-        },
-        y: {
-            show: true
-        }
-      },
-      axis: {
-        y: {
-          label: {
-            text: 'PPM',
-            position: 'outer-middle'
-          }
-        },
-        x: {
-          label: {
-            text: 'Date'
-          }
-        }
-      }
-    });
+  // var landing_page_chart = c3.generate({
+  //     bindto: document.getElementById('landing_page_chart'),
+  //   //   size: {
+  //   //   width: 1200
+  //   //  },
+  //         data: {
+  //           url: '/testdata.csv'
+  //       },
+  //       transition: {
+  //           duration: 1000
+  //       },
+  //       subchart: {
+  //         show: true
+  //         },
+  //         zoom: {
+  //         enabled: true
+  //         },
+  //       grid: {
+  //       x: {
+  //           show: true
+  //       },
+  //       y: {
+  //           show: true
+  //       }
+  //     },
+  //     axis: {
+  //       y: {
+  //         label: {
+  //           text: 'PPM',
+  //           position: 'outer-middle'
+  //         }
+  //       },
+  //       x: {
+  //         label: {
+  //           text: 'Date'
+  //         }
+  //       }
+  //     }
+  //   });
 
   var landing_page_chart2 = c3.generate({
       bindto: document.getElementById('landing_page_chart2'),
@@ -45,7 +45,7 @@ if ($("#landing_page_chart").length > 0) {
     //   width: 1200
     //  },
           data: {
-            url: '/testdata2.csv'
+            url: '/_export_prime-export-A1BeGO.csv'
         },    tooltip: {
         grouped: true // Default true
     },
@@ -61,19 +61,19 @@ if ($("#landing_page_chart").length > 0) {
         },
         y: {
             show: true,
-            lines: [{value: 150, text: 'User set limit'}]
+            // lines: [{value: 150, text: 'User set limit'}]
         }
       },
       axis: {
         y: {
           label: {
-            text: 'PPM',
+            text: 'y-label',
             position: 'outer-middle'
           }
         },
         x: {
           label: {
-            text: 'Date'
+            text: 'x-label'
           }
         }
       }
