@@ -517,7 +517,7 @@ if ($("#landing_page_chart").length > 0) {
             axis: {x: {type: 'timeseries', tick: {format: "%Y-%m-%d %H:%M:%S"}}},
             line:     {width: {ratio: 0.5}},
             tooltip:  {grouped: true},
-            subchart: {show: false},
+            subchart: {show: true},
             zoom:     {enabled: true},
             grid:     {x: {show: true},
                        y: {show: true}},
